@@ -32,9 +32,12 @@
     
     for (NSInteger i = 0; i < 7; i++)
     {
-        UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TimeTablePage"];
+        TimeTablePageController *controller = (TimeTablePageController*)[self.storyboard instantiateViewControllerWithIdentifier:@"TimeTablePage"];
         
-        switch (i) {
+        controller.dayIndex = i;
+        
+        switch (i)
+        {
             case 0:
                 controller.title = @"Mon";
                 break;

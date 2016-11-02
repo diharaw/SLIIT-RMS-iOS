@@ -10,4 +10,6 @@
 
 @interface TimeTablePageController : UIViewController
 
+@property (nonatomic) NSInteger dayIndex;
+
 @end
