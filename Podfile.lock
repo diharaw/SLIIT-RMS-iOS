@@ -17,6 +17,21 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - FontAwesomeKit (2.2.0):
+    - FontAwesomeKit/Core (= 2.2.0)
+    - FontAwesomeKit/FontAwesome (= 2.2.0)
+    - FontAwesomeKit/FoundationIcons (= 2.2.0)
+    - FontAwesomeKit/IonIcons (= 2.2.0)
+    - FontAwesomeKit/Zocial (= 2.2.0)
+  - FontAwesomeKit/Core (2.2.0)
+  - FontAwesomeKit/FontAwesome (2.2.0):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.2.0):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.2.0):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.2.0):
+    - FontAwesomeKit/Core
   - HexColors (2.2.1)
   - ICViewPager (1.5.1)
   - JASidePanels (1.3.2)
@@ -24,29 +39,34 @@ PODS:
   - MBProgressHUD (1.0.0)
   - OLCOrm (1.1.1):
     - FMDB
+  - TPKeyboardAvoiding (1.3)
   - TSMessages (0.9.12):
     - HexColors (~> 2.2.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - FontAwesomeKit
   - ICViewPager
   - JASidePanels
   - MaterialControls (~> 1.2.2)
   - MBProgressHUD
   - OLCOrm
+  - TPKeyboardAvoiding
   - TSMessages
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   ICViewPager: 032dc71a50fe898e185fae6112ded4bed0e0523c
   JASidePanels: c8f5b130e18d51ee3de988d1c1fad2f88e0b0d21
   MaterialControls: 1c6b29e78d3a13d8dd6a67ed31b6d26eb5de8f72
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   OLCOrm: 5d1b19d2584c464c3bda2f68bcd98b416117455d
+  TPKeyboardAvoiding: a5138f318c06fb3e151f886e18ce4a72695d9cbe
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
 
-PODFILE CHECKSUM: 787827e84e0beb91ac8055dfa5faddc26d2a9f87
+PODFILE CHECKSUM: b8f23ebf6b20d56b8b39b7bbfb68e4ff42ab2781
 
 COCOAPODS: 1.0.0
