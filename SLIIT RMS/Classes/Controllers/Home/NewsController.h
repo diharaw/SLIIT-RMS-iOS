@@ -1,5 +1,5 @@
 //
-//  SplashScreenController.h
+//  RequestController.h
 //  SLIIT RMS
 //
 //  Created by Dihara Wijetunga on 10/21/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SplashScreenController : UIViewController
+@interface NewsController : UIViewController
 
 @end

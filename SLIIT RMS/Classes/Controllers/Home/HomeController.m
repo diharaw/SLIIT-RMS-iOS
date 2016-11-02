@@ -3,18 +3,18 @@
 //  SLIIT RMS
 //
 //  Created by Dihara Wijetunga on 10/21/16.
-//  Copyright © 2016 Fidenz. All rights reserved.
+//  Copyright © 2016 Dihara Wijetunga. All rights reserved.
 //
 
 #import "HomeController.h"
 #import "TimeTableController.h"
-#import "RequestController.h"
+#import "NewsController.h"
 #import "SettingsController.h"
 
 @interface HomeController ()
 {
     TimeTableController* timeTableController;
-    RequestController* requestController;
+    NewsController* newsController;
     SettingsController* settingsController;
 }
 @end
@@ -29,8 +29,8 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self.tabBar setSelectedItem:self.timeTableItem];
-    [self loadTimeTable];
+    [self.tabBar setSelectedItem:self.requestItem];
+    [self loadNews];
 }
 
 #pragma mark - Private
@@ -67,11 +67,11 @@
     [self loadViewIntoContainer:timeTableController];
 }
 
-- (void)loadRequest
+- (void)loadNews
 {
     [self resetContainer];
-    requestController = (RequestController*)[self.storyboard instantiateViewControllerWithIdentifier:@"Request"];
-    [self loadViewIntoContainer:requestController];
+    newsController = (NewsController*)[self.storyboard instantiateViewControllerWithIdentifier:@"News"];
+    [self loadViewIntoContainer:newsController];
 }
 
 - (void)loadSettings
@@ -88,12 +88,12 @@
     switch (item.tag) {
         case 0:
         {
-            [self loadTimeTable];
+            [self loadNews];
             break;
         }
         case 1:
         {
-            [self loadRequest];
+            [self loadTimeTable];
             break;
         }
         case 2:

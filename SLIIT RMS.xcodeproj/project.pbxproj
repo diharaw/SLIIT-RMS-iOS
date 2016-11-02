@@ -10,13 +10,18 @@
 		B0210A216D69BA0823C2C0FC /* libPods-SLIIT RMS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D5C1EBDAF8745510A30490 /* libPods-SLIIT RMS.a */; };
 		E89364B91DBA6316001923AB /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89364B81DBA6316001923AB /* HomeController.m */; };
 		E89364BC1DBA6904001923AB /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89364BB1DBA6904001923AB /* SettingsController.m */; };
-		E89364BF1DBA6959001923AB /* RequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89364BE1DBA6959001923AB /* RequestController.m */; };
+		E89364BF1DBA6959001923AB /* NewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89364BE1DBA6959001923AB /* NewsController.m */; };
 		E89364C21DBA696D001923AB /* TimeTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89364C11DBA696D001923AB /* TimeTableController.m */; };
 		E8D68FC71DACF08600242E8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D68FC61DACF08600242E8E /* main.m */; };
 		E8D68FCA1DACF08600242E8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D68FC91DACF08600242E8E /* AppDelegate.m */; };
 		E8D68FD01DACF08600242E8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D68FCE1DACF08600242E8E /* Main.storyboard */; };
 		E8D68FD21DACF08600242E8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D68FD11DACF08600242E8E /* Assets.xcassets */; };
 		E8D68FD51DACF08600242E8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D68FD31DACF08600242E8E /* LaunchScreen.storyboard */; };
+		E8EB26651DC9A34000B4D750 /* UserApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EB26641DC9A34000B4D750 /* UserApi.m */; };
+		E8EB26681DC9A35500B4D750 /* UserSync.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EB26671DC9A35500B4D750 /* UserSync.m */; };
+		E8EB266B1DC9A36500B4D750 /* TimeTableApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EB266A1DC9A36500B4D750 /* TimeTableApi.m */; };
+		E8EB266E1DC9A37400B4D750 /* TimeTableSync.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EB266D1DC9A37400B4D750 /* TimeTableSync.m */; };
+		E8EB26731DC9AD7F00B4D750 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EB26721DC9AD7F00B4D750 /* User.m */; };
 		E8F27FC21DBA1FA100BC7BB9 /* SplashScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F27FC11DBA1FA100BC7BB9 /* SplashScreenController.m */; };
 		E8F27FC51DBA218900BC7BB9 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F27FC41DBA218900BC7BB9 /* LoginController.m */; };
 /* End PBXBuildFile section */
@@ -29,8 +34,8 @@
 		E89364B81DBA6316001923AB /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeController.m; path = Home/HomeController.m; sourceTree = "<group>"; };
 		E89364BA1DBA6904001923AB /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsController.h; path = Home/SettingsController.h; sourceTree = "<group>"; };
 		E89364BB1DBA6904001923AB /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsController.m; path = Home/SettingsController.m; sourceTree = "<group>"; };
-		E89364BD1DBA6959001923AB /* RequestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestController.h; path = Home/RequestController.h; sourceTree = "<group>"; };
-		E89364BE1DBA6959001923AB /* RequestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestController.m; path = Home/RequestController.m; sourceTree = "<group>"; };
+		E89364BD1DBA6959001923AB /* NewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsController.h; path = Home/NewsController.h; sourceTree = "<group>"; };
+		E89364BE1DBA6959001923AB /* NewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsController.m; path = Home/NewsController.m; sourceTree = "<group>"; };
 		E89364C01DBA696D001923AB /* TimeTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeTableController.h; path = Home/TimeTableController.h; sourceTree = "<group>"; };
 		E89364C11DBA696D001923AB /* TimeTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeTableController.m; path = Home/TimeTableController.m; sourceTree = "<group>"; };
 		E8D68FC21DACF08600242E8E /* SLIIT RMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SLIIT RMS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +46,17 @@
 		E8D68FD11DACF08600242E8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8D68FD41DACF08600242E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8D68FD61DACF08600242E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8EB26631DC9A34000B4D750 /* UserApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserApi.h; sourceTree = "<group>"; };
+		E8EB26641DC9A34000B4D750 /* UserApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserApi.m; sourceTree = "<group>"; };
+		E8EB26661DC9A35500B4D750 /* UserSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSync.h; sourceTree = "<group>"; };
+		E8EB26671DC9A35500B4D750 /* UserSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSync.m; sourceTree = "<group>"; };
+		E8EB26691DC9A36500B4D750 /* TimeTableApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTableApi.h; sourceTree = "<group>"; };
+		E8EB266A1DC9A36500B4D750 /* TimeTableApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTableApi.m; sourceTree = "<group>"; };
+		E8EB266C1DC9A37400B4D750 /* TimeTableSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTableSync.h; sourceTree = "<group>"; };
+		E8EB266D1DC9A37400B4D750 /* TimeTableSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTableSync.m; sourceTree = "<group>"; };
+		E8EB266F1DC9AAC500B4D750 /* Consts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Consts.h; sourceTree = "<group>"; };
+		E8EB26711DC9AD7F00B4D750 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Models/User.h; sourceTree = "<group>"; };
+		E8EB26721DC9AD7F00B4D750 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Models/User.m; sourceTree = "<group>"; };
 		E8F27FC01DBA1FA100BC7BB9 /* SplashScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashScreenController.h; path = Splash/SplashScreenController.h; sourceTree = "<group>"; };
 		E8F27FC11DBA1FA100BC7BB9 /* SplashScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashScreenController.m; path = Splash/SplashScreenController.m; sourceTree = "<group>"; };
 		E8F27FC31DBA218900BC7BB9 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = Login/LoginController.h; sourceTree = "<group>"; };
@@ -115,12 +131,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E8EB26701DC9AD5A00B4D750 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E8EB26711DC9AD7F00B4D750 /* User.h */,
+				E8EB26721DC9AD7F00B4D750 /* User.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		E8F27FB91DBA122B00BC7BB9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				E8F27FBA1DBA122B00BC7BB9 /* AppDelegate */,
 				E8F27FBB1DBA122B00BC7BB9 /* Controllers */,
 				E8F27FBC1DBA122B00BC7BB9 /* Helpers */,
+				E8EB26701DC9AD5A00B4D750 /* Models */,
 				E8F27FBD1DBA122B00BC7BB9 /* Services */,
 			);
 			path = Classes;
@@ -146,8 +172,8 @@
 				E89364B81DBA6316001923AB /* HomeController.m */,
 				E89364BA1DBA6904001923AB /* SettingsController.h */,
 				E89364BB1DBA6904001923AB /* SettingsController.m */,
-				E89364BD1DBA6959001923AB /* RequestController.h */,
-				E89364BE1DBA6959001923AB /* RequestController.m */,
+				E89364BD1DBA6959001923AB /* NewsController.h */,
+				E89364BE1DBA6959001923AB /* NewsController.m */,
 				E89364C01DBA696D001923AB /* TimeTableController.h */,
 				E89364C11DBA696D001923AB /* TimeTableController.m */,
 			);
@@ -157,6 +183,7 @@
 		E8F27FBC1DBA122B00BC7BB9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E8EB266F1DC9AAC500B4D750 /* Consts.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -173,6 +200,10 @@
 		E8F27FBE1DBA122B00BC7BB9 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				E8EB26631DC9A34000B4D750 /* UserApi.h */,
+				E8EB26641DC9A34000B4D750 /* UserApi.m */,
+				E8EB26691DC9A36500B4D750 /* TimeTableApi.h */,
+				E8EB266A1DC9A36500B4D750 /* TimeTableApi.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -180,6 +211,10 @@
 		E8F27FBF1DBA122B00BC7BB9 /* Sync */ = {
 			isa = PBXGroup;
 			children = (
+				E8EB26661DC9A35500B4D750 /* UserSync.h */,
+				E8EB26671DC9A35500B4D750 /* UserSync.m */,
+				E8EB266C1DC9A37400B4D750 /* TimeTableSync.h */,
+				E8EB266D1DC9A37400B4D750 /* TimeTableSync.m */,
 			);
 			path = Sync;
 			sourceTree = "<group>";
@@ -218,6 +253,7 @@
 				TargetAttributes = {
 					E8D68FC11DACF08600242E8E = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = PR2GTDEE5X;
 					};
 				};
 			};
@@ -305,13 +341,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8EB26731DC9AD7F00B4D750 /* User.m in Sources */,
 				E89364BC1DBA6904001923AB /* SettingsController.m in Sources */,
 				E8D68FCA1DACF08600242E8E /* AppDelegate.m in Sources */,
+				E8EB266B1DC9A36500B4D750 /* TimeTableApi.m in Sources */,
 				E8F27FC51DBA218900BC7BB9 /* LoginController.m in Sources */,
+				E8EB26681DC9A35500B4D750 /* UserSync.m in Sources */,
 				E89364C21DBA696D001923AB /* TimeTableController.m in Sources */,
+				E8EB26651DC9A34000B4D750 /* UserApi.m in Sources */,
 				E8F27FC21DBA1FA100BC7BB9 /* SplashScreenController.m in Sources */,
 				E89364B91DBA6316001923AB /* HomeController.m in Sources */,
-				E89364BF1DBA6959001923AB /* RequestController.m in Sources */,
+				E89364BF1DBA6959001923AB /* NewsController.m in Sources */,
+				E8EB266E1DC9A37400B4D750 /* TimeTableSync.m in Sources */,
 				E8D68FC71DACF08600242E8E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +470,7 @@
 			baseConfigurationReference = 8E55538A25B66D42627A2810 /* Pods-SLIIT RMS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PR2GTDEE5X;
 				INFOPLIST_FILE = "SLIIT RMS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Fidenz.SLIIT-RMS";
@@ -441,6 +483,7 @@
 			baseConfigurationReference = A23103D9F3BAA6685A216560 /* Pods-SLIIT RMS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PR2GTDEE5X;
 				INFOPLIST_FILE = "SLIIT RMS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Fidenz.SLIIT-RMS";

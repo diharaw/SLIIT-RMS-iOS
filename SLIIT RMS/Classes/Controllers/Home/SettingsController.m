@@ -2,8 +2,8 @@
 //  SettingsController.m
 //  SLIIT RMS
 //
-//  Created by Fidenz on 10/21/16.
-//  Copyright © 2016 Fidenz. All rights reserved.
+//  Created by Dihara Wijetunga on 10/21/16.
+//  Copyright © 2016 Dihara Wijetunga. All rights reserved.
 //
 
 #import "SettingsController.h"

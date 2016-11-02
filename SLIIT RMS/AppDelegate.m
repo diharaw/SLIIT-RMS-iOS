@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "User.h"
+#import <OLCOrm.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self initDB];
+    
     return YES;
 }
 
@@ -40,6 +44,14 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Database Setup
+
+- (void) initDB
+{
+    OLCOrm* dbH = [OLCOrm databaseName:@"SLIIT_RMS_DB" version:[NSNumber numberWithInt:1] enableDebug:YES];
+    [dbH makeTable:[User class]];
 }
 
 @end

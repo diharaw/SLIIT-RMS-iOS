@@ -3,16 +3,16 @@
 //  SLIIT RMS
 //
 //  Created by Dihara Wijetunga on 10/21/16.
-//  Copyright © 2016 Fidenz. All rights reserved.
+//  Copyright © 2016 Dihara Wijetunga. All rights reserved.
 //
 
-#import "RequestController.h"
+#import "NewsController.h"
 
-@interface RequestController ()
+@interface NewsController ()
 
 @end
 
-@implementation RequestController
+@implementation NewsController
 
 - (void)viewDidLoad
 {

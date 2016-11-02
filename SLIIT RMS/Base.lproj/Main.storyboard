@@ -42,6 +42,7 @@
                     </view>
                     <connections>
                         <segue destination="ieG-yl-hVk" kind="show" identifier="SplashToLogin" id="9FD-Oo-z2Q"/>
+                        <segue destination="r0q-vo-afq" kind="show" identifier="SplashToHome" id="0zR-FJ-Frn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQX-Ks-Hsk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -60,7 +61,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjf-9f-1ss">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjf-9f-1ss" customClass="TPKeyboardAvoidingCollectionView">
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUv-ly-98g">
                                         <subviews>
@@ -115,7 +116,6 @@
                                             <constraint firstItem="trD-F5-Gew" firstAttribute="leading" secondItem="yUv-ly-98g" secondAttribute="leading" constant="74" id="BA3-yu-w6w"/>
                                             <constraint firstItem="qzO-Qt-oOh" firstAttribute="centerX" secondItem="yUv-ly-98g" secondAttribute="centerX" id="BDg-dQ-RQF"/>
                                             <constraint firstAttribute="trailing" secondItem="jit-sG-nhI" secondAttribute="trailing" constant="75" id="Bs0-Zj-0T2"/>
-                                            <constraint firstAttribute="width" constant="375" id="CxS-6f-oXE"/>
                                             <constraint firstItem="bwi-Q6-S0P" firstAttribute="centerX" secondItem="yUv-ly-98g" secondAttribute="centerX" id="EkF-ef-VlD"/>
                                             <constraint firstItem="qzO-Qt-oOh" firstAttribute="top" secondItem="bwi-Q6-S0P" secondAttribute="bottom" constant="24" id="H0U-vP-QWb"/>
                                             <constraint firstItem="zfV-2e-FY1" firstAttribute="leading" secondItem="yUv-ly-98g" secondAttribute="leading" constant="74" id="Hru-YB-NGB"/>
@@ -139,6 +139,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="yUv-ly-98g" secondAttribute="trailing" id="1hy-nw-4q1"/>
+                                    <constraint firstItem="yUv-ly-98g" firstAttribute="centerX" secondItem="pjf-9f-1ss" secondAttribute="centerX" id="4nR-bt-n7L"/>
                                     <constraint firstItem="yUv-ly-98g" firstAttribute="top" secondItem="pjf-9f-1ss" secondAttribute="top" id="P1W-je-mIU"/>
                                     <constraint firstAttribute="bottom" secondItem="yUv-ly-98g" secondAttribute="bottom" id="QEh-Vv-KDI"/>
                                     <constraint firstItem="yUv-ly-98g" firstAttribute="leading" secondItem="pjf-9f-1ss" secondAttribute="leading" id="hOZ-2H-vUV"/>
@@ -151,6 +152,7 @@
                             <constraint firstAttribute="trailing" secondItem="pjf-9f-1ss" secondAttribute="trailing" id="8B4-MY-mWA"/>
                             <constraint firstItem="pjf-9f-1ss" firstAttribute="top" secondItem="qbO-gc-rue" secondAttribute="bottom" id="BBg-wv-9Ar"/>
                             <constraint firstItem="pjf-9f-1ss" firstAttribute="leading" secondItem="Ywu-zf-fez" secondAttribute="leading" id="TwM-Fy-qIS"/>
+                            <constraint firstItem="pjf-9f-1ss" firstAttribute="centerX" secondItem="Ywu-zf-fez" secondAttribute="centerX" id="kSE-yM-HYp"/>
                         </constraints>
                     </view>
                     <connections>
@@ -179,8 +181,8 @@
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIU-s4-3qw">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="Time Table" image="NotificationBackgroundSuccessIcon.png" id="u7l-8Q-n14"/>
-                                    <tabBarItem tag="1" title="Request" image="NotificationBackgroundWarningIcon.png" id="F48-FN-V2b"/>
+                                    <tabBarItem title="News" image="NotificationBackgroundWarningIcon.png" id="F48-FN-V2b"/>
+                                    <tabBarItem tag="1" title="Time Table" image="NotificationBackgroundSuccessIcon.png" id="u7l-8Q-n14"/>
                                     <tabBarItem tag="2" title="Settings" image="NotificationBackgroundErrorIcon.png" id="yDH-KI-frO"/>
                                 </items>
                                 <color key="tintColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -342,10 +344,10 @@
             </objects>
             <point key="canvasLocation" x="3780" y="831.63418290854577"/>
         </scene>
-        <!--Request-->
+        <!--News-->
         <scene sceneID="DiY-N4-gaq">
             <objects>
-                <viewController storyboardIdentifier="Request" title="Request" id="UTc-R5-U7D" customClass="RequestController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="News" title="News" id="UTc-R5-U7D" customClass="NewsController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sVK-8x-oim"/>
                         <viewControllerLayoutGuide type="bottom" id="VUO-ls-ZgM"/>
@@ -365,7 +367,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r0q-vo-afq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CI8-20-EeJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CI8-20-EeJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -389,4 +391,7 @@
         <image name="NotificationBackgroundWarningIcon.png" width="3" height="17"/>
         <image name="SLIIT_Logo_Crest" width="300" height="376"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0zR-FJ-Frn"/>
+    </inferredMetricsTieBreakers>
 </document>
