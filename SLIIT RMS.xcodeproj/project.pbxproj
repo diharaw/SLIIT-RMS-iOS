@@ -22,6 +22,8 @@
 		E8EB266B1DC9A36500B4D750 /* TimeTableApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EB266A1DC9A36500B4D750 /* TimeTableApi.m */; };
 		E8EB266E1DC9A37400B4D750 /* TimeTableSync.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EB266D1DC9A37400B4D750 /* TimeTableSync.m */; };
 		E8EB26731DC9AD7F00B4D750 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EB26721DC9AD7F00B4D750 /* User.m */; };
+		E8EB26761DC9B8D800B4D750 /* TimeTablePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EB26751DC9B8D800B4D750 /* TimeTablePageController.m */; };
+		E8EB267A1DC9C1F900B4D750 /* CAPSPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EB26791DC9C1F900B4D750 /* CAPSPageMenu.m */; };
 		E8F27FC21DBA1FA100BC7BB9 /* SplashScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F27FC11DBA1FA100BC7BB9 /* SplashScreenController.m */; };
 		E8F27FC51DBA218900BC7BB9 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F27FC41DBA218900BC7BB9 /* LoginController.m */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,10 @@
 		E8EB266F1DC9AAC500B4D750 /* Consts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Consts.h; sourceTree = "<group>"; };
 		E8EB26711DC9AD7F00B4D750 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Models/User.h; sourceTree = "<group>"; };
 		E8EB26721DC9AD7F00B4D750 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Models/User.m; sourceTree = "<group>"; };
+		E8EB26741DC9B8D800B4D750 /* TimeTablePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeTablePageController.h; path = Home/TimeTablePageController.h; sourceTree = "<group>"; };
+		E8EB26751DC9B8D800B4D750 /* TimeTablePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeTablePageController.m; path = Home/TimeTablePageController.m; sourceTree = "<group>"; };
+		E8EB26781DC9C1F900B4D750 /* CAPSPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAPSPageMenu.h; path = Libs/PageMenu/CAPSPageMenu.h; sourceTree = "<group>"; };
+		E8EB26791DC9C1F900B4D750 /* CAPSPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CAPSPageMenu.m; path = Libs/PageMenu/CAPSPageMenu.m; sourceTree = "<group>"; };
 		E8F27FC01DBA1FA100BC7BB9 /* SplashScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashScreenController.h; path = Splash/SplashScreenController.h; sourceTree = "<group>"; };
 		E8F27FC11DBA1FA100BC7BB9 /* SplashScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashScreenController.m; path = Splash/SplashScreenController.m; sourceTree = "<group>"; };
 		E8F27FC31DBA218900BC7BB9 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = Login/LoginController.h; sourceTree = "<group>"; };
@@ -140,9 +146,19 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		E8EB26771DC9C1C800B4D750 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E8EB26781DC9C1F900B4D750 /* CAPSPageMenu.h */,
+				E8EB26791DC9C1F900B4D750 /* CAPSPageMenu.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		E8F27FB91DBA122B00BC7BB9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E8EB26771DC9C1C800B4D750 /* Utility */,
 				E8F27FBA1DBA122B00BC7BB9 /* AppDelegate */,
 				E8F27FBB1DBA122B00BC7BB9 /* Controllers */,
 				E8F27FBC1DBA122B00BC7BB9 /* Helpers */,
@@ -176,6 +192,8 @@
 				E89364BE1DBA6959001923AB /* NewsController.m */,
 				E89364C01DBA696D001923AB /* TimeTableController.h */,
 				E89364C11DBA696D001923AB /* TimeTableController.m */,
+				E8EB26741DC9B8D800B4D750 /* TimeTablePageController.h */,
+				E8EB26751DC9B8D800B4D750 /* TimeTablePageController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -349,10 +367,12 @@
 				E8EB26681DC9A35500B4D750 /* UserSync.m in Sources */,
 				E89364C21DBA696D001923AB /* TimeTableController.m in Sources */,
 				E8EB26651DC9A34000B4D750 /* UserApi.m in Sources */,
+				E8EB267A1DC9C1F900B4D750 /* CAPSPageMenu.m in Sources */,
 				E8F27FC21DBA1FA100BC7BB9 /* SplashScreenController.m in Sources */,
 				E89364B91DBA6316001923AB /* HomeController.m in Sources */,
 				E89364BF1DBA6959001923AB /* NewsController.m in Sources */,
 				E8EB266E1DC9A37400B4D750 /* TimeTableSync.m in Sources */,
+				E8EB26761DC9B8D800B4D750 /* TimeTablePageController.m in Sources */,
 				E8D68FC71DACF08600242E8E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

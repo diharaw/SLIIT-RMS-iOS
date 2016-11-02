@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CAPSPageMenu.h"
 
 @interface TimeTableController : UIViewController
+
+@property (nonatomic) CAPSPageMenu *pagemenu;
 
 @end

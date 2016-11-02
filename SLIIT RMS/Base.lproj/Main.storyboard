@@ -225,32 +225,30 @@
                     <view key="view" contentMode="scaleToFill" id="fsw-5B-1ZV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9N-mC-V8Z">
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="RAe-K3-8vn"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bWg-dm-n6x">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="bWg-dm-n6x" secondAttribute="trailing" id="4gn-q8-ibr"/>
-                            <constraint firstItem="tCk-EH-LmJ" firstAttribute="top" secondItem="bWg-dm-n6x" secondAttribute="bottom" id="PDs-TK-CK3"/>
-                            <constraint firstItem="tCk-EH-LmJ" firstAttribute="top" secondItem="W9N-mC-V8Z" secondAttribute="bottom" id="Q5T-ME-cGG"/>
-                            <constraint firstItem="bWg-dm-n6x" firstAttribute="top" secondItem="g9f-Ua-X3l" secondAttribute="bottom" id="hLg-AI-OD6"/>
-                            <constraint firstItem="W9N-mC-V8Z" firstAttribute="leading" secondItem="fsw-5B-1ZV" secondAttribute="leading" id="iYh-H1-no3"/>
-                            <constraint firstItem="bWg-dm-n6x" firstAttribute="leading" secondItem="W9N-mC-V8Z" secondAttribute="trailing" id="rZc-zI-oJy"/>
-                            <constraint firstItem="W9N-mC-V8Z" firstAttribute="top" secondItem="g9f-Ua-X3l" secondAttribute="bottom" id="zKX-VI-hOG"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t31-XZ-clD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3780" y="112.89355322338831"/>
+        </scene>
+        <!--TimeTablePage-->
+        <scene sceneID="k4K-yC-SbO">
+            <objects>
+                <viewController storyboardIdentifier="TimeTablePage" title="TimeTablePage" id="ndq-2W-V0M" customClass="TimeTablePageController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZEK-kp-8eS"/>
+                        <viewControllerLayoutGuide type="bottom" id="uTt-gM-WaI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MGu-FL-t1G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cyg-RO-QOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4633" y="113"/>
         </scene>
         <!--Settings Controller-->
         <scene sceneID="8o1-pd-lGG">

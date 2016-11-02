@@ -7,14 +7,12 @@ target 'SLIIT RMS' do
 
   # Pods for SLIIT RMS
 
-  pod 'ICViewPager'
   pod 'TSMessages'
   pod 'AFNetworking'
   pod 'MBProgressHUD'
   pod 'FontAwesomeKit'
   pod 'TPKeyboardAvoiding'
   pod 'OLCOrm'
-  pod 'JASidePanels'
-  pod 'MaterialControls', '~> 1.2.2'
+  pod 'MZFormSheetPresentationController'
 
 end
