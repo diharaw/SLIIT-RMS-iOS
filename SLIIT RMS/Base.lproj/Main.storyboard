@@ -20,6 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RMS-WP-3" translatesAutoresizingMaskIntoConstraints="NO" id="fID-CJ-ljH"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SLIIT_Logo_Crest" translatesAutoresizingMaskIntoConstraints="NO" id="ZWE-4l-DoM">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZWE-4l-DoM" secondAttribute="height" multiplier="300:376" id="8AD-Zf-RNz"/>
@@ -36,8 +37,12 @@
                         <constraints>
                             <constraint firstItem="PsR-GB-4ZF" firstAttribute="top" secondItem="TJV-Sa-Rbe" secondAttribute="bottom" constant="20" id="6wo-NR-cmJ"/>
                             <constraint firstItem="TJV-Sa-Rbe" firstAttribute="centerX" secondItem="bWa-Kf-KCi" secondAttribute="centerX" id="Det-o1-3LR"/>
+                            <constraint firstItem="fID-CJ-ljH" firstAttribute="top" secondItem="Ps9-gl-dAt" secondAttribute="bottom" constant="-20" id="IDy-gZ-7MI"/>
                             <constraint firstItem="ZWE-4l-DoM" firstAttribute="centerX" secondItem="bWa-Kf-KCi" secondAttribute="centerX" id="PY2-9r-hfX"/>
                             <constraint firstItem="ZWE-4l-DoM" firstAttribute="centerY" secondItem="bWa-Kf-KCi" secondAttribute="centerY" constant="-0.5" id="S89-Ig-vFz"/>
+                            <constraint firstAttribute="trailing" secondItem="fID-CJ-ljH" secondAttribute="trailing" id="Wss-Gh-jgz"/>
+                            <constraint firstItem="PsR-GB-4ZF" firstAttribute="top" secondItem="fID-CJ-ljH" secondAttribute="bottom" id="jEx-f0-6ic"/>
+                            <constraint firstItem="fID-CJ-ljH" firstAttribute="leading" secondItem="bWa-Kf-KCi" secondAttribute="leading" id="ogF-O5-4XV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -61,6 +66,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RMS-WP-3" translatesAutoresizingMaskIntoConstraints="NO" id="6O6-sw-f0Y"/>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjf-9f-1ss" customClass="TPKeyboardAvoidingCollectionView">
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUv-ly-98g">
@@ -149,9 +155,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bYP-mm-nVn" firstAttribute="top" secondItem="pjf-9f-1ss" secondAttribute="bottom" id="4Et-o9-FWy"/>
+                            <constraint firstItem="6O6-sw-f0Y" firstAttribute="leading" secondItem="Ywu-zf-fez" secondAttribute="leading" id="82P-4U-uhQ"/>
                             <constraint firstAttribute="trailing" secondItem="pjf-9f-1ss" secondAttribute="trailing" id="8B4-MY-mWA"/>
+                            <constraint firstItem="6O6-sw-f0Y" firstAttribute="top" secondItem="qbO-gc-rue" secondAttribute="bottom" constant="-20" id="8bg-3U-n1j"/>
                             <constraint firstItem="pjf-9f-1ss" firstAttribute="top" secondItem="qbO-gc-rue" secondAttribute="bottom" id="BBg-wv-9Ar"/>
+                            <constraint firstAttribute="trailing" secondItem="6O6-sw-f0Y" secondAttribute="trailing" id="LW6-xz-z7C"/>
                             <constraint firstItem="pjf-9f-1ss" firstAttribute="leading" secondItem="Ywu-zf-fez" secondAttribute="leading" id="TwM-Fy-qIS"/>
+                            <constraint firstItem="bYP-mm-nVn" firstAttribute="top" secondItem="6O6-sw-f0Y" secondAttribute="bottom" id="Zq1-oM-A3K"/>
                             <constraint firstItem="pjf-9f-1ss" firstAttribute="centerX" secondItem="Ywu-zf-fez" secondAttribute="centerX" id="kSE-yM-HYp"/>
                         </constraints>
                     </view>
@@ -387,6 +397,7 @@
         <image name="NotificationBackgroundErrorIcon.png" width="17" height="18"/>
         <image name="NotificationBackgroundSuccessIcon.png" width="20" height="17"/>
         <image name="NotificationBackgroundWarningIcon.png" width="3" height="17"/>
+        <image name="RMS-WP-3" width="328" height="480"/>
         <image name="SLIIT_Logo_Crest" width="300" height="376"/>
     </resources>
     <inferredMetricsTieBreakers>

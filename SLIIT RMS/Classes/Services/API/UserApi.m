@@ -22,6 +22,7 @@
 {
     self = [super init];
     manager =[AFHTTPSessionManager manager];
+    
     return self;
 }
 
