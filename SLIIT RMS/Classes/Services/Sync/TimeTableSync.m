@@ -51,6 +51,8 @@
 {
     if(response != nil)
     {
+        [TimeTable truncate];
+        
         [self saveTimeTableForDay:response withDay:@"Monday"];
         [self saveTimeTableForDay:response withDay:@"Tuesday"];
         [self saveTimeTableForDay:response withDay:@"Wednesday"];

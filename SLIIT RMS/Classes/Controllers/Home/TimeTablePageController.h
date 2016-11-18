@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimeTablePageController : UIViewController
+@interface TimeTablePageController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic) NSInteger dayIndex;
+
+@property (weak, nonatomic) IBOutlet UITableView *tblTimeTable;
 
 @end
