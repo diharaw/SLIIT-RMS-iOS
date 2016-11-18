@@ -11,6 +11,7 @@
 		783081891DDEBEE60003D012 /* DashboardSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 783081881DDEBEE60003D012 /* DashboardSync.m */; };
 		7830818C1DDEC0920003D012 /* TimeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7830818B1DDEC0920003D012 /* TimeTable.m */; };
 		7830818F1DDEC1510003D012 /* DashboardStat.m in Sources */ = {isa = PBXBuildFile; fileRef = 7830818E1DDEC1510003D012 /* DashboardStat.m */; };
+		784A57971DDEF5A8005D2F57 /* SideDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784A57961DDEF5A8005D2F57 /* SideDrawerController.m */; };
 		7899D4911DDE952300CEADA5 /* DashboardApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 7899D4901DDE952300CEADA5 /* DashboardApi.m */; };
 		B0210A216D69BA0823C2C0FC /* libPods-SLIIT RMS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D5C1EBDAF8745510A30490 /* libPods-SLIIT RMS.a */; };
 		E89364B91DBA6316001923AB /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89364B81DBA6316001923AB /* HomeController.m */; };
@@ -42,6 +43,8 @@
 		7830818B1DDEC0920003D012 /* TimeTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeTable.m; path = Models/TimeTable.m; sourceTree = "<group>"; };
 		7830818D1DDEC1510003D012 /* DashboardStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardStat.h; path = Models/DashboardStat.h; sourceTree = "<group>"; };
 		7830818E1DDEC1510003D012 /* DashboardStat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardStat.m; path = Models/DashboardStat.m; sourceTree = "<group>"; };
+		784A57951DDEF5A8005D2F57 /* SideDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SideDrawerController.h; path = Home/SideDrawerController.h; sourceTree = "<group>"; };
+		784A57961DDEF5A8005D2F57 /* SideDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SideDrawerController.m; path = Home/SideDrawerController.m; sourceTree = "<group>"; };
 		7899D48F1DDE952300CEADA5 /* DashboardApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardApi.h; sourceTree = "<group>"; };
 		7899D4901DDE952300CEADA5 /* DashboardApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardApi.m; sourceTree = "<group>"; };
 		8E55538A25B66D42627A2810 /* Pods-SLIIT RMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLIIT RMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SLIIT RMS/Pods-SLIIT RMS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +213,8 @@
 				E89364C11DBA696D001923AB /* TimeTableController.m */,
 				E8EB26741DC9B8D800B4D750 /* TimeTablePageController.h */,
 				E8EB26751DC9B8D800B4D750 /* TimeTablePageController.m */,
+				784A57951DDEF5A8005D2F57 /* SideDrawerController.h */,
+				784A57961DDEF5A8005D2F57 /* SideDrawerController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 				E8EB26681DC9A35500B4D750 /* UserSync.m in Sources */,
 				E89364C21DBA696D001923AB /* TimeTableController.m in Sources */,
 				E8EB26651DC9A34000B4D750 /* UserApi.m in Sources */,
+				784A57971DDEF5A8005D2F57 /* SideDrawerController.m in Sources */,
 				783081891DDEBEE60003D012 /* DashboardSync.m in Sources */,
 				E8EB267A1DC9C1F900B4D750 /* CAPSPageMenu.m in Sources */,
 				E8F27FC21DBA1FA100BC7BB9 /* SplashScreenController.m in Sources */,

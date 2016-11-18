@@ -14,5 +14,6 @@ target 'SLIIT RMS' do
   pod 'TPKeyboardAvoiding'
   pod 'OLCOrm'
   pod 'MZFormSheetPresentationController'
+  pod 'MMDrawerController', '~> 0.5.7'
 
 end

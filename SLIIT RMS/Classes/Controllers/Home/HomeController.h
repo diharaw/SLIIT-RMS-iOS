@@ -16,4 +16,8 @@
 @property (strong, nonatomic) IBOutlet UITabBarItem *settingsItem;
 @property (strong, nonatomic) IBOutlet UIView *containerView;
 
+- (void)loadTimeTable;
+- (void)loadNews;
+- (void)loadSettings;
+
 @end

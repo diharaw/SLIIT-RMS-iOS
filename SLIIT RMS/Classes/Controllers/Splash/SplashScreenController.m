@@ -8,6 +8,8 @@
 
 #import "SplashScreenController.h"
 #import "User.h"
+#import "SideDrawerController.h"
+#import <MMDrawerController.h>
 
 @interface SplashScreenController ()
 
@@ -27,7 +29,21 @@
     if(profiles.count == 0)
         [self performSegueWithIdentifier:@"SplashToLogin" sender:self];
     else
-        [self performSegueWithIdentifier:@"SplashToHome" sender:self];
+        [self performSegueWithIdentifier:@"SplashToDrawerMain" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"SplashToDrawerMain"])
+    {
+        MMDrawerController* drawer = (MMDrawerController*)[segue destinationViewController];
+        
+        UIViewController* center = [self.storyboard instantiateViewControllerWithIdentifier:@"TimeTableNav"];
+        [drawer setCenterViewController:center];
+        
+        SideDrawerController* left = (SideDrawerController*)[self.storyboard instantiateViewControllerWithIdentifier:@"SideDrawer"];
+        [drawer setLeftDrawerViewController:left];
+    }
 }
 
 @end

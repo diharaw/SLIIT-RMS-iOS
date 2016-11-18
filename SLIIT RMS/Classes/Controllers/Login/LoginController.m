@@ -8,8 +8,10 @@
 
 #import "LoginController.h"
 #import "UserSync.h"
+#import "SideDrawerController.h"
 #import <TSMessage.h>
 #import <MBProgressHUD.h>
+#import <MMDrawerController.h>
 
 @interface LoginController () <UserSyncDelegate, MBProgressHUDDelegate>
 
@@ -50,6 +52,8 @@
 
 - (IBAction)onLoginPressed:(id)sender
 {
+    [self performSegueWithIdentifier:@"LoginToDrawerMain" sender:self];
+    
     if([self validateEmail:self.txtEmail.text])
     {
         if(![self.txtPassword.text isEqualToString:@""])
@@ -80,11 +84,28 @@
     [progressHud hideAnimated:YES];
     
     if(error == nil)
-        [self performSegueWithIdentifier:@"LoginToHome" sender:self];
+        [self performSegueWithIdentifier:@"LoginToDrawerMain" sender:self];
     else
     {
         [TSMessage showNotificationInViewController:self title:@"Error!" subtitle:@"Failed to Login" type:TSMessageNotificationTypeError duration:3];
     }
 }
+
+#pragma mark - Segue 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"LoginToDrawerMain"])
+    {
+        MMDrawerController* drawer = (MMDrawerController*)[segue destinationViewController];
+        
+        UIViewController* center = [self.storyboard instantiateViewControllerWithIdentifier:@"CoreNav"];
+        [drawer setCenterViewController:center];
+        
+        SideDrawerController* left = (SideDrawerController*)[self.storyboard instantiateViewControllerWithIdentifier:@"SideDrawer"];
+        [drawer setLeftDrawerViewController:left];
+    }
+}
+
 
 @end

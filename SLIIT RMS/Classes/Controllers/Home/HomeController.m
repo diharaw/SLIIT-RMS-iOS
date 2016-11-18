@@ -9,6 +9,9 @@
 #import "HomeController.h"
 #import "TimeTableController.h"
 #import "NewsController.h"
+#import "MMDrawerBarButtonItem.h"
+#import "MMDrawerController.h"
+#import "UIViewController+MMDrawerController.h"
 #import "SettingsController.h"
 
 @interface HomeController ()
@@ -25,19 +28,30 @@
 {
     [super viewDidLoad];
     [self setupUI];
+    [self setupLeftMenuButton];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self.tabBar setSelectedItem:self.requestItem];
-    [self loadNews];
+    [self loadTimeTable];
 }
 
 #pragma mark - Private
 
 - (void)setupUI
 {
-    self.tabBar.delegate = self;
+    //self.tabBar.delegate = self;
+}
+
+- (void)setupLeftMenuButton
+{
+    MMDrawerBarButtonItem *leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
+    [self.navigationItem setLeftBarButtonItem:leftDrawerButton];
+}
+
+- (void)leftDrawerButtonPress:(id)leftDrawerButtonPress
+{
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
 - (void)resetContainer
@@ -81,30 +95,5 @@
     [self loadViewIntoContainer:settingsController];
 }
 
-#pragma mark - UI Events
-
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-    switch (item.tag) {
-        case 0:
-        {
-            [self loadNews];
-            break;
-        }
-        case 1:
-        {
-            [self loadTimeTable];
-            break;
-        }
-        case 2:
-        {
-            [self loadSettings];
-            break;
-        }
-            
-        default:
-            break;
-    }
-}
 
 @end

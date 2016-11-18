@@ -34,6 +34,18 @@ PODS:
     - FontAwesomeKit/Core
   - HexColors (2.2.1)
   - MBProgressHUD (1.0.0)
+  - MMDrawerController (0.5.7):
+    - MMDrawerController/Core (= 0.5.7)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
+    - MMDrawerController/MMDrawerVisualStates (= 0.5.7)
+    - MMDrawerController/Subclass (= 0.5.7)
+  - MMDrawerController/Core (0.5.7)
+  - MMDrawerController/MMDrawerBarButtonItem (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.5.7):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.5.7):
+    - MMDrawerController/Core
   - MZAppearance (1.1.6)
   - MZFormSheetPresentationController (2.4.2):
     - MZAppearance
@@ -47,6 +59,7 @@ DEPENDENCIES:
   - AFNetworking
   - FontAwesomeKit
   - MBProgressHUD
+  - MMDrawerController (~> 0.5.7)
   - MZFormSheetPresentationController
   - OLCOrm
   - TPKeyboardAvoiding
@@ -58,12 +71,13 @@ SPEC CHECKSUMS:
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
   MZAppearance: 0c06d3fa9cc55142f1da14bc8631fbe8fd6e19d5
   MZFormSheetPresentationController: c1dc3bce639d2393b3cc416fcb6e050eb5bca062
   OLCOrm: 5d1b19d2584c464c3bda2f68bcd98b416117455d
   TPKeyboardAvoiding: a5138f318c06fb3e151f886e18ce4a72695d9cbe
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
 
-PODFILE CHECKSUM: 91906f7bd5d59c3939f2f7ebf6a983e3d93379fe
+PODFILE CHECKSUM: 7cba878f72a29e7d7d3f1c326700839cd72fcd9e
 
 COCOAPODS: 1.1.1
