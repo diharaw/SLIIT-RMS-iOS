@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		781C7AF21DDE2567005C8005 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 781C7AF11DDE2567005C8005 /* AppDelegate.m */; };
+		7899D4911DDE952300CEADA5 /* DashboardApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 7899D4901DDE952300CEADA5 /* DashboardApi.m */; };
 		B0210A216D69BA0823C2C0FC /* libPods-SLIIT RMS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D5C1EBDAF8745510A30490 /* libPods-SLIIT RMS.a */; };
 		E89364B91DBA6316001923AB /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89364B81DBA6316001923AB /* HomeController.m */; };
 		E89364BC1DBA6904001923AB /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89364BB1DBA6904001923AB /* SettingsController.m */; };
 		E89364BF1DBA6959001923AB /* NewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89364BE1DBA6959001923AB /* NewsController.m */; };
 		E89364C21DBA696D001923AB /* TimeTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89364C11DBA696D001923AB /* TimeTableController.m */; };
 		E8D68FC71DACF08600242E8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D68FC61DACF08600242E8E /* main.m */; };
-		E8D68FCA1DACF08600242E8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D68FC91DACF08600242E8E /* AppDelegate.m */; };
 		E8D68FD01DACF08600242E8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D68FCE1DACF08600242E8E /* Main.storyboard */; };
 		E8D68FD21DACF08600242E8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D68FD11DACF08600242E8E /* Assets.xcassets */; };
 		E8D68FD51DACF08600242E8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D68FD31DACF08600242E8E /* LaunchScreen.storyboard */; };
@@ -30,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		16D5C1EBDAF8745510A30490 /* libPods-SLIIT RMS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SLIIT RMS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		781C7AF01DDE2567005C8005 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "SLIIT RMS/AppDelegate.h"; sourceTree = SOURCE_ROOT; };
+		781C7AF11DDE2567005C8005 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "SLIIT RMS/AppDelegate.m"; sourceTree = SOURCE_ROOT; };
+		7899D48F1DDE952300CEADA5 /* DashboardApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardApi.h; sourceTree = "<group>"; };
+		7899D4901DDE952300CEADA5 /* DashboardApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardApi.m; sourceTree = "<group>"; };
 		8E55538A25B66D42627A2810 /* Pods-SLIIT RMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLIIT RMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SLIIT RMS/Pods-SLIIT RMS.debug.xcconfig"; sourceTree = "<group>"; };
 		A23103D9F3BAA6685A216560 /* Pods-SLIIT RMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLIIT RMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SLIIT RMS/Pods-SLIIT RMS.release.xcconfig"; sourceTree = "<group>"; };
 		E89364B71DBA6316001923AB /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeController.h; path = Home/HomeController.h; sourceTree = "<group>"; };
@@ -42,8 +47,6 @@
 		E89364C11DBA696D001923AB /* TimeTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeTableController.m; path = Home/TimeTableController.m; sourceTree = "<group>"; };
 		E8D68FC21DACF08600242E8E /* SLIIT RMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SLIIT RMS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D68FC61DACF08600242E8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E8D68FC81DACF08600242E8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
-		E8D68FC91DACF08600242E8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
 		E8D68FCF1DACF08600242E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8D68FD11DACF08600242E8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8D68FD41DACF08600242E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -171,8 +174,8 @@
 		E8F27FBA1DBA122B00BC7BB9 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				E8D68FC81DACF08600242E8E /* AppDelegate.h */,
-				E8D68FC91DACF08600242E8E /* AppDelegate.m */,
+				781C7AF01DDE2567005C8005 /* AppDelegate.h */,
+				781C7AF11DDE2567005C8005 /* AppDelegate.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -222,6 +225,8 @@
 				E8EB26641DC9A34000B4D750 /* UserApi.m */,
 				E8EB26691DC9A36500B4D750 /* TimeTableApi.h */,
 				E8EB266A1DC9A36500B4D750 /* TimeTableApi.m */,
+				7899D48F1DDE952300CEADA5 /* DashboardApi.h */,
+				7899D4901DDE952300CEADA5 /* DashboardApi.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -244,12 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8D68FD91DACF08600242E8E /* Build configuration list for PBXNativeTarget "SLIIT RMS" */;
 			buildPhases = (
-				D0D58EF41C0F212F83DAFE1B /* 📦 Check Pods Manifest.lock */,
+				D0D58EF41C0F212F83DAFE1B /* [CP] Check Pods Manifest.lock */,
 				E8D68FBE1DACF08600242E8E /* Sources */,
 				E8D68FBF1DACF08600242E8E /* Frameworks */,
 				E8D68FC01DACF08600242E8E /* Resources */,
-				3A41AD2CDD2C181CABECA521 /* 📦 Embed Pods Frameworks */,
-				2DC95FBB170B505CC80E33EA /* 📦 Copy Pods Resources */,
+				3A41AD2CDD2C181CABECA521 /* [CP] Embed Pods Frameworks */,
+				2DC95FBB170B505CC80E33EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -307,14 +312,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2DC95FBB170B505CC80E33EA /* 📦 Copy Pods Resources */ = {
+		2DC95FBB170B505CC80E33EA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,14 +327,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SLIIT RMS/Pods-SLIIT RMS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3A41AD2CDD2C181CABECA521 /* 📦 Embed Pods Frameworks */ = {
+		3A41AD2CDD2C181CABECA521 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,19 +342,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SLIIT RMS/Pods-SLIIT RMS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D0D58EF41C0F212F83DAFE1B /* 📦 Check Pods Manifest.lock */ = {
+		D0D58EF41C0F212F83DAFE1B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -361,7 +366,6 @@
 			files = (
 				E8EB26731DC9AD7F00B4D750 /* User.m in Sources */,
 				E89364BC1DBA6904001923AB /* SettingsController.m in Sources */,
-				E8D68FCA1DACF08600242E8E /* AppDelegate.m in Sources */,
 				E8EB266B1DC9A36500B4D750 /* TimeTableApi.m in Sources */,
 				E8F27FC51DBA218900BC7BB9 /* LoginController.m in Sources */,
 				E8EB26681DC9A35500B4D750 /* UserSync.m in Sources */,
@@ -371,9 +375,11 @@
 				E8F27FC21DBA1FA100BC7BB9 /* SplashScreenController.m in Sources */,
 				E89364B91DBA6316001923AB /* HomeController.m in Sources */,
 				E89364BF1DBA6959001923AB /* NewsController.m in Sources */,
+				7899D4911DDE952300CEADA5 /* DashboardApi.m in Sources */,
 				E8EB266E1DC9A37400B4D750 /* TimeTableSync.m in Sources */,
 				E8EB26761DC9B8D800B4D750 /* TimeTablePageController.m in Sources */,
 				E8D68FC71DACF08600242E8E /* main.m in Sources */,
+				781C7AF21DDE2567005C8005 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking.h>
 
 @interface TimeTableApi : NSObject
+
+-(void) getTimetable:(NSString*)type withWeekType:(NSString*)weekType withId:(NSString*)strID withYear:(NSInteger)year withSemester:(NSInteger)semester withBlock:(void (^)(NSDictionary* response, NSError *error)) block;
 
 @end
