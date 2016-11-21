@@ -7,6 +7,7 @@
 //
 
 #import "TimeTablePageController.h"
+#import "TimeTableEntryCell.h"
 
 @interface TimeTablePageController ()
 
@@ -17,13 +18,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setupUI];
+}
+
+#pragma mark - Private
+
+- (void)setupUI
+{
+    self.tblTimeTable.delegate = self;
+    self.tblTimeTable.dataSource = self;
 }
 
 #pragma mark - Table View Delegates
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    TimeTableEntryCell* cell = (TimeTableEntryCell*)[tableView dequeueReusableCellWithIdentifier:@"TimeTableEntryCell"];
+    return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -36,7 +47,10 @@
     return 1;
 }
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 150;
+}
 
 
 @end

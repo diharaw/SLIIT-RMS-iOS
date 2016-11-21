@@ -79,6 +79,7 @@
     [self resetContainer];
     timeTableController = (TimeTableController*)[self.storyboard instantiateViewControllerWithIdentifier:@"TimeTable"];
     [self loadViewIntoContainer:timeTableController];
+    [self setTitle:@"Time Table"];
 }
 
 - (void)loadNews
@@ -86,6 +87,7 @@
     [self resetContainer];
     newsController = (NewsController*)[self.storyboard instantiateViewControllerWithIdentifier:@"News"];
     [self loadViewIntoContainer:newsController];
+    [self setTitle:@"Dashboard"];
 }
 
 - (void)loadSettings
@@ -93,6 +95,7 @@
     [self resetContainer];
     settingsController = (SettingsController*)[self.storyboard instantiateViewControllerWithIdentifier:@"Settings"];
     [self loadViewIntoContainer:settingsController];
+    [self setTitle:@"Settings"];
 }
 
 
