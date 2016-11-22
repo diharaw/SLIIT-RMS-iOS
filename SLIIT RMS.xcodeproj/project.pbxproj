@@ -12,6 +12,7 @@
 		7830818C1DDEC0920003D012 /* TimeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7830818B1DDEC0920003D012 /* TimeTable.m */; };
 		7830818F1DDEC1510003D012 /* DashboardStat.m in Sources */ = {isa = PBXBuildFile; fileRef = 7830818E1DDEC1510003D012 /* DashboardStat.m */; };
 		784A57971DDEF5A8005D2F57 /* SideDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 784A57961DDEF5A8005D2F57 /* SideDrawerController.m */; };
+		786BA1281DE437C7007920ED /* DashboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786BA1271DE437C7007920ED /* DashboardController.m */; };
 		788E6AAA1DDFAEEE006021C3 /* TimeTableEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 788E6AA91DDFAEEE006021C3 /* TimeTableEntryCell.m */; };
 		788E6AAD1DDFAEFF006021C3 /* IntervalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 788E6AAC1DDFAEFF006021C3 /* IntervalCell.m */; };
 		7899D4911DDE952300CEADA5 /* DashboardApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 7899D4901DDE952300CEADA5 /* DashboardApi.m */; };
@@ -47,6 +48,8 @@
 		7830818E1DDEC1510003D012 /* DashboardStat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardStat.m; path = Models/DashboardStat.m; sourceTree = "<group>"; };
 		784A57951DDEF5A8005D2F57 /* SideDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SideDrawerController.h; path = Home/SideDrawerController.h; sourceTree = "<group>"; };
 		784A57961DDEF5A8005D2F57 /* SideDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SideDrawerController.m; path = Home/SideDrawerController.m; sourceTree = "<group>"; };
+		786BA1261DE437C7007920ED /* DashboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardController.h; path = Home/DashboardController.h; sourceTree = "<group>"; };
+		786BA1271DE437C7007920ED /* DashboardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardController.m; path = Home/DashboardController.m; sourceTree = "<group>"; };
 		788E6AA81DDFAEEE006021C3 /* TimeTableEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeTableEntryCell.h; path = Home/TimeTableEntryCell.h; sourceTree = "<group>"; };
 		788E6AA91DDFAEEE006021C3 /* TimeTableEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeTableEntryCell.m; path = Home/TimeTableEntryCell.m; sourceTree = "<group>"; };
 		788E6AAB1DDFAEFF006021C3 /* IntervalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntervalCell.h; path = Home/IntervalCell.h; sourceTree = "<group>"; };
@@ -102,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		786BA1251DE437A4007920ED /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				786BA1261DE437C7007920ED /* DashboardController.h */,
+				786BA1271DE437C7007920ED /* DashboardController.m */,
+			);
+			name = Dashboard;
+			sourceTree = "<group>";
+		};
 		788E6AA31DDFAE43006021C3 /* TimeTable */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,8 +143,9 @@
 		788E6AA51DDFAE83006021C3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				786BA1251DE437A4007920ED /* Dashboard */,
 				788E6AA31DDFAE43006021C3 /* TimeTable */,
-				788E6AA71DDFAEA0006021C3 /* Dashboard */,
+				788E6AA71DDFAEA0006021C3 /* News */,
 				788E6AA61DDFAE95006021C3 /* Settings */,
 				E89364B71DBA6316001923AB /* HomeController.h */,
 				E89364B81DBA6316001923AB /* HomeController.m */,
@@ -151,13 +164,13 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
-		788E6AA71DDFAEA0006021C3 /* Dashboard */ = {
+		788E6AA71DDFAEA0006021C3 /* News */ = {
 			isa = PBXGroup;
 			children = (
 				E89364BD1DBA6959001923AB /* NewsController.h */,
 				E89364BE1DBA6959001923AB /* NewsController.m */,
 			);
-			name = Dashboard;
+			name = News;
 			sourceTree = "<group>";
 		};
 		83BD552E4E966ECEE5CEB058 /* Pods */ = {
@@ -445,6 +458,7 @@
 				E8EB26651DC9A34000B4D750 /* UserApi.m in Sources */,
 				784A57971DDEF5A8005D2F57 /* SideDrawerController.m in Sources */,
 				783081891DDEBEE60003D012 /* DashboardSync.m in Sources */,
+				786BA1281DE437C7007920ED /* DashboardController.m in Sources */,
 				E8EB267A1DC9C1F900B4D750 /* CAPSPageMenu.m in Sources */,
 				E8F27FC21DBA1FA100BC7BB9 /* SplashScreenController.m in Sources */,
 				E89364B91DBA6316001923AB /* HomeController.m in Sources */,

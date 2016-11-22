@@ -36,13 +36,17 @@
     self.currentIndex = indexPath.row;
     
     switch (indexPath.row) {
-        case 0:
-            [home loadNews];
-            break;
         case 1:
-            [home loadTimeTable];
+            [home loadDashboard];
             break;
         case 2:
+            [home loadTimeTable];
+            break;
+        case 3:
+            [home loadNewsfeed];
+            break;
+            
+        case 4:
             [home loadSettings];
             break;
             

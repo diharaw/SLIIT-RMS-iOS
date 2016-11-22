@@ -9,6 +9,7 @@
 #import "HomeController.h"
 #import "TimeTableController.h"
 #import "NewsController.h"
+#import "DashboardController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "MMDrawerController.h"
 #import "UIViewController+MMDrawerController.h"
@@ -19,6 +20,7 @@
     TimeTableController* timeTableController;
     NewsController* newsController;
     SettingsController* settingsController;
+    DashboardController* dashboardController;
 }
 @end
 
@@ -82,11 +84,19 @@
     [self setTitle:@"Time Table"];
 }
 
-- (void)loadNews
+- (void)loadNewsfeed
 {
     [self resetContainer];
     newsController = (NewsController*)[self.storyboard instantiateViewControllerWithIdentifier:@"News"];
     [self loadViewIntoContainer:newsController];
+    [self setTitle:@"Newsfeed"];
+}
+
+- (void)loadDashboard
+{
+    [self resetContainer];
+    dashboardController = (DashboardController*)[self.storyboard instantiateViewControllerWithIdentifier:@"Dashboard"];
+    [self loadViewIntoContainer:dashboardController];
     [self setTitle:@"Dashboard"];
 }
 

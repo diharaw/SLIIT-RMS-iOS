@@ -10,8 +10,9 @@
 #import "TimeTablePageController.h"
 #import "TimeTableSync.h"
 #import "TimeTable.h"
+#import <MBProgressHUD.h>
 
-@interface TimeTableController () <TimeTableSyncDelegate>
+@interface TimeTableController () <TimeTableSyncDelegate, MBProgressHUDDelegate>
 
 @end
 
@@ -19,6 +20,7 @@
 {
     NSMutableArray *controllerArray;
     NSArray* allTimeTables;
+    MBProgressHUD* progressHud;
 }
 
 - (void)viewDidLoad {
@@ -29,11 +31,27 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    //[TimeTableSync sharedCenter].delegate = self;
-    //[[TimeTableSync sharedCenter] startTimeTableSync:@"BATCH" withWeekType:@"Weekday" withId:@"BT_1_1" withYear:2016 withSemester:2];
+    [self downloadData];
 }
 
 #pragma mark - private
+
+- (void) downloadData
+{
+    if(allTimeTables.count == 0)
+    {
+        progressHud = [[MBProgressHUD alloc] initWithView:self.view];
+        [self.view addSubview:progressHud];
+        progressHud.delegate = self;
+        [progressHud showAnimated:YES];
+    }
+    
+    [TimeTableSync sharedCenter].delegate = self;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [[TimeTableSync sharedCenter] startTimeTableSync:@"BATCH" withWeekType:@"Weekday" withId:@"BT_1_1" withYear:2016 withSemester:2];
+    });
+}
 
 - (NSArray*) getTimeTableForDay:(NSUInteger)day
 {
@@ -119,7 +137,18 @@
 
 - (void)onTimeTableSyncComplete:(NSError *)error
 {
+    [progressHud hideAnimated:YES];
+    allTimeTables = [TimeTable all];
     
+    if(allTimeTables.count != 0)
+    {
+        NSInteger day = 0;
+        for(TimeTablePageController* controller in controllerArray)
+        {
+            day++;
+            [controller setTimeTableEntries:[self getTimeTableForDay:day]];
+        }
+    }
 }
 
 @end
