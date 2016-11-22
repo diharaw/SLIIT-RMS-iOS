@@ -9,7 +9,7 @@
 #import "TimeTableApi.h"
 #import "Consts.h"
 
-#define API_TIMETABLE @"api/timetable/getTimeTableJson"
+#define API_TIMETABLE @"timetable/getTimeTableJson"
 
 @implementation TimeTableApi
 {
@@ -48,18 +48,7 @@
          {
              if(responseObject != nil)
              {
-                 NSInteger code = [[responseObject valueForKey:@"code"] integerValue];
-                 
-                 if(code == 200)
-                     block(responseObject, nil);
-                 else
-                 {
-                     NSError* error = [[NSError alloc]init];
-                     NSMutableDictionary* ud = [[error userInfo] mutableCopy];
-                     [ud setValue:@"Failed to retrieve TimeTable" forKey:@"NSLocalizedDescription"];
-                     error = [NSError errorWithDomain:@"" code:code userInfo:ud];
-                     block(nil, error);
-                 }
+                block(responseObject, nil);
              }
              else
              {

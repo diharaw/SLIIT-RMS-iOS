@@ -14,11 +14,20 @@
 @end
 
 @implementation TimeTablePageController
+{
+    NSArray *timeTableEntries;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self setupUI];
+}
+
+- (void)setTimeTableEntries:(NSArray *)_timeTableEntries
+{
+    timeTableEntries = _timeTableEntries;
+    [self.tblTimeTable reloadData];
 }
 
 #pragma mark - Private
@@ -39,7 +48,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return timeTableEntries.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -51,6 +60,5 @@
 {
     return 150;
 }
-
 
 @end

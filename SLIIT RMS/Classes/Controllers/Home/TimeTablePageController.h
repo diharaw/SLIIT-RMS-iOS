@@ -14,4 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tblTimeTable;
 
+- (void) setTimeTableEntries:(NSArray *)_timeTableEntries;
+
 @end

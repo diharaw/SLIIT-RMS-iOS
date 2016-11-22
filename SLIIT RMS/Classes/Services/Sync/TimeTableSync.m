@@ -38,7 +38,7 @@
                    withYear:(NSInteger)year
                withSemester:(NSInteger)semester
 {
-    [timeTableAPI getTimetable:type withWeekType:weekType withId:strID withYear:year withSemester:year withBlock:^(NSDictionary *response, NSError *error)
+    [timeTableAPI getTimetable:type withWeekType:weekType withId:strID withYear:year withSemester:semester withBlock:^(NSDictionary *response, NSError *error)
      {
          [self processTimeTableResponse:response withError:error];
      }];
@@ -54,7 +54,7 @@
         [TimeTable truncate];
         
         [self saveTimeTableForDay:response withDay:@"Monday"];
-        [self saveTimeTableForDay:response withDay:@"Tuesday"];
+        [self saveTimeTableForDay:response withDay:@"Tuseday"];
         [self saveTimeTableForDay:response withDay:@"Wednesday"];
         [self saveTimeTableForDay:response withDay:@"Thursday"];
         [self saveTimeTableForDay:response withDay:@"Friday"];
@@ -70,42 +70,77 @@
 - (void) saveTimeTableForDay:(NSDictionary*)response withDay:(NSString*)day
 {
     NSArray* slots = [response valueForKey:day];
+    NSMutableArray* temp = [[NSMutableArray alloc] init];
+    NSInteger slot = 0;
+
+    NSInteger dayInt = 0;
     
-    for (NSDictionary* dic in slots)
+    if([day isEqualToString:@"Monday"])
+        dayInt = 1;
+    else if([day isEqualToString:@"Tuseday"])
+        dayInt = 2;
+    else if([day isEqualToString:@"Wednesday"])
+        dayInt = 3;
+    else if([day isEqualToString:@"Thursday"])
+        dayInt = 4;
+    else if([day isEqualToString:@"Friday"])
+        dayInt = 5;
+    else if([day isEqualToString:@"Saturday"])
+        dayInt = 6;
+    else if([day isEqualToString:@"Sunday"])
+        dayInt = 7;
+    
+    for (id object in slots)
     {
-        TimeTable* timeTable = [[TimeTable alloc] init];
+        slot++;
         
-        timeTable.subjectCode = [dic valueForKey:@"subjectCode"];
-        timeTable.resource = [dic valueForKey:@"resource"];
-        timeTable.type = [dic valueForKey:@"type"];
-        timeTable.batch = [dic valueForKey:@"batch"];
-        NSString* day = [dic valueForKey:@"day"];
-        NSInteger dayInt = 0;
-        
-        if([day isEqualToString:@"Monday"])
-            dayInt = 1;
-        else if([day isEqualToString:@"Tuesday"])
-            dayInt = 2;
-        else if([day isEqualToString:@"Wednesday"])
-            dayInt = 3;
-        else if([day isEqualToString:@"Thursday"])
-            dayInt = 4;
-        else if([day isEqualToString:@"Friday"])
-            dayInt = 5;
-        else if([day isEqualToString:@"Saturday"])
-            dayInt = 6;
-        else if([day isEqualToString:@"Sunday"])
-            dayInt = 7;
-        
-        timeTable.day = [NSNumber numberWithInteger:dayInt];
-        
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"HHmm"];
-        
-        timeTable.startTime = [dateFormatter dateFromString:[dic valueForKey:@"startTime"]];
-        timeTable.endTime = [dateFormatter dateFromString:[dic valueForKey:@"endTime"]];
-        
-        [timeTable save];
+        if([object isKindOfClass:[NSDictionary class]])
+        {
+            NSDictionary* dic = (NSDictionary*)object;
+            
+            TimeTable* timeTable = [[TimeTable alloc] init];
+            
+            timeTable.subjectCode = [dic valueForKey:@"subjectCode"];
+            timeTable.resource = [dic valueForKey:@"resource"];
+            timeTable.type = [dic valueForKey:@"type"];
+            timeTable.batch = [dic valueForKey:@"batch"];
+            
+            timeTable.day = [NSNumber numberWithInteger:dayInt];
+            timeTable.slot = [NSNumber numberWithInteger:slot];
+            timeTable.empty = [NSNumber numberWithInteger:0];
+            
+            //NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            //[dateFormatter setDateFormat:@"HH:mm"];
+            
+            timeTable.startTime = [dic valueForKey:@"startTime"];
+            timeTable.endTime = [dic valueForKey:@"endTime"];
+            
+            //timeTable.startTime = [dateFormatter dateFromString:[start substringToIndex:[start length]-3]];
+            //timeTable.endTime = [dateFormatter dateFromString:[end substringToIndex:[end length]-3]];
+            
+            TimeTable* lastItem = (TimeTable*)temp.lastObject;
+            if([lastItem.subjectCode isEqualToString:timeTable.subjectCode] && [lastItem.type isEqualToString:timeTable.type])
+            {
+                lastItem.endTime = timeTable.endTime;
+            }
+            else
+            {
+                [temp addObject:timeTable];
+            }
+        }
+        else
+        {
+            TimeTable* timeTable = [[TimeTable alloc] init];
+            timeTable.day = [NSNumber numberWithInteger:dayInt];
+            timeTable.slot = [NSNumber numberWithInteger:slot];
+            timeTable.empty = [NSNumber numberWithInteger:1];
+            [temp addObject:timeTable];
+        }
+    }
+    
+    for (TimeTable* timetable in temp)
+    {
+        [timetable save];
     }
 }
 

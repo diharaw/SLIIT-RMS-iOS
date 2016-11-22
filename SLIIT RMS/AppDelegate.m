@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "User.h"
+#import "TimeTable.h"
 #import <OLCOrm.h>
 
 @interface AppDelegate ()
@@ -50,8 +51,9 @@
 
 - (void) initDB
 {
-    OLCOrm* dbH = [OLCOrm databaseName:@"SLIIT_RMS_DB" version:[NSNumber numberWithInt:2] enableDebug:YES];
+    OLCOrm* dbH = [OLCOrm databaseName:@"SLIIT_RMS_DB" version:[NSNumber numberWithInt:5] enableDebug:YES];
     [dbH makeTable:[User class]];
+    [dbH makeTable:[TimeTable class]];
 }
 
 @end
