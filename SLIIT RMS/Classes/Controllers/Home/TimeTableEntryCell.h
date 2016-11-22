@@ -10,4 +10,9 @@
 
 @interface TimeTableEntryCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *lblStartTime;
+@property (weak, nonatomic) IBOutlet UILabel *lblEndTime;
+@property (weak, nonatomic) IBOutlet UILabel *lblSubject;
+@property (weak, nonatomic) IBOutlet UILabel *lblLocation;
+
 @end

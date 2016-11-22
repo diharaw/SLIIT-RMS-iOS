@@ -131,6 +131,10 @@
         else
         {
             TimeTable* timeTable = [[TimeTable alloc] init];
+            
+            if(slot == 5)
+                timeTable.subjectCode = @"INTERVAL";
+            
             timeTable.day = [NSNumber numberWithInteger:dayInt];
             timeTable.slot = [NSNumber numberWithInteger:slot];
             timeTable.empty = [NSNumber numberWithInteger:1];

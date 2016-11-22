@@ -8,6 +8,9 @@
 
 #import "TimeTablePageController.h"
 #import "TimeTableEntryCell.h"
+#import "IntervalCell.h"
+#import "UnallocatedCell.h"
+#import "TimeTable.h"
 
 @interface TimeTablePageController ()
 
@@ -42,8 +45,29 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TimeTableEntryCell* cell = (TimeTableEntryCell*)[tableView dequeueReusableCellWithIdentifier:@"TimeTableEntryCell"];
-    return cell;
+    TimeTable* current = [timeTableEntries objectAtIndex:indexPath.row];
+    
+    if([current.subjectCode isEqualToString:@"INTERVAL"])
+    {
+        IntervalCell* cell = (IntervalCell*)[tableView dequeueReusableCellWithIdentifier:@"IntervalCell"];
+        return cell;
+    }
+    else if([current.subjectCode isEqualToString:@""])
+    {
+        UnallocatedCell* cell = (UnallocatedCell*)[tableView dequeueReusableCellWithIdentifier:@"UnallocatedCell"];
+        return cell;
+    }
+    else
+    {
+        TimeTableEntryCell* cell = (TimeTableEntryCell*)[tableView dequeueReusableCellWithIdentifier:@"TimeTableEntryCell"];
+        
+        cell.lblStartTime.text = current.startTime;
+        cell.lblEndTime.text = current.endTime;
+        cell.lblSubject.text = current.subjectCode;
+        cell.lblLocation.text = current.resource;
+        
+        return cell;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -58,7 +82,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 150;
+    TimeTable* current = [timeTableEntries objectAtIndex:indexPath.row];
+    
+    if([current.subjectCode isEqualToString:@"INTERVAL"] || [current.subjectCode isEqualToString:@""])
+        return 80;
+    else
+        return 150;
 }
 
 @end

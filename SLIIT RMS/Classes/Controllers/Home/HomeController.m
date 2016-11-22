@@ -35,7 +35,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self loadTimeTable];
+    [self loadDashboard];
 }
 
 #pragma mark - Private

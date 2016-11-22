@@ -15,6 +15,7 @@
 		786BA1281DE437C7007920ED /* DashboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786BA1271DE437C7007920ED /* DashboardController.m */; };
 		788E6AAA1DDFAEEE006021C3 /* TimeTableEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 788E6AA91DDFAEEE006021C3 /* TimeTableEntryCell.m */; };
 		788E6AAD1DDFAEFF006021C3 /* IntervalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 788E6AAC1DDFAEFF006021C3 /* IntervalCell.m */; };
+		78995E3E1DE48FD600D2AE89 /* UnallocatedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78995E3D1DE48FD600D2AE89 /* UnallocatedCell.m */; };
 		7899D4911DDE952300CEADA5 /* DashboardApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 7899D4901DDE952300CEADA5 /* DashboardApi.m */; };
 		B0210A216D69BA0823C2C0FC /* libPods-SLIIT RMS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D5C1EBDAF8745510A30490 /* libPods-SLIIT RMS.a */; };
 		E89364B91DBA6316001923AB /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89364B81DBA6316001923AB /* HomeController.m */; };
@@ -24,7 +25,6 @@
 		E8D68FC71DACF08600242E8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D68FC61DACF08600242E8E /* main.m */; };
 		E8D68FD01DACF08600242E8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D68FCE1DACF08600242E8E /* Main.storyboard */; };
 		E8D68FD21DACF08600242E8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D68FD11DACF08600242E8E /* Assets.xcassets */; };
-		E8D68FD51DACF08600242E8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D68FD31DACF08600242E8E /* LaunchScreen.storyboard */; };
 		E8EB26651DC9A34000B4D750 /* UserApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EB26641DC9A34000B4D750 /* UserApi.m */; };
 		E8EB26681DC9A35500B4D750 /* UserSync.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EB26671DC9A35500B4D750 /* UserSync.m */; };
 		E8EB266B1DC9A36500B4D750 /* TimeTableApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EB266A1DC9A36500B4D750 /* TimeTableApi.m */; };
@@ -54,6 +54,8 @@
 		788E6AA91DDFAEEE006021C3 /* TimeTableEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeTableEntryCell.m; path = Home/TimeTableEntryCell.m; sourceTree = "<group>"; };
 		788E6AAB1DDFAEFF006021C3 /* IntervalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntervalCell.h; path = Home/IntervalCell.h; sourceTree = "<group>"; };
 		788E6AAC1DDFAEFF006021C3 /* IntervalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntervalCell.m; path = Home/IntervalCell.m; sourceTree = "<group>"; };
+		78995E3C1DE48FD600D2AE89 /* UnallocatedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnallocatedCell.h; path = Home/UnallocatedCell.h; sourceTree = "<group>"; };
+		78995E3D1DE48FD600D2AE89 /* UnallocatedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnallocatedCell.m; path = Home/UnallocatedCell.m; sourceTree = "<group>"; };
 		7899D48F1DDE952300CEADA5 /* DashboardApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardApi.h; sourceTree = "<group>"; };
 		7899D4901DDE952300CEADA5 /* DashboardApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardApi.m; sourceTree = "<group>"; };
 		8E55538A25B66D42627A2810 /* Pods-SLIIT RMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLIIT RMS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SLIIT RMS/Pods-SLIIT RMS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,7 +72,6 @@
 		E8D68FC61DACF08600242E8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E8D68FCF1DACF08600242E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8D68FD11DACF08600242E8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E8D68FD41DACF08600242E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8D68FD61DACF08600242E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8EB26631DC9A34000B4D750 /* UserApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserApi.h; sourceTree = "<group>"; };
 		E8EB26641DC9A34000B4D750 /* UserApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserApi.m; sourceTree = "<group>"; };
@@ -125,6 +126,8 @@
 				788E6AA91DDFAEEE006021C3 /* TimeTableEntryCell.m */,
 				788E6AAB1DDFAEFF006021C3 /* IntervalCell.h */,
 				788E6AAC1DDFAEFF006021C3 /* IntervalCell.m */,
+				78995E3C1DE48FD600D2AE89 /* UnallocatedCell.h */,
+				78995E3D1DE48FD600D2AE89 /* UnallocatedCell.m */,
 			);
 			name = TimeTable;
 			sourceTree = "<group>";
@@ -214,7 +217,6 @@
 				E8F27FB91DBA122B00BC7BB9 /* Classes */,
 				E8D68FCE1DACF08600242E8E /* Main.storyboard */,
 				E8D68FD11DACF08600242E8E /* Assets.xcassets */,
-				E8D68FD31DACF08600242E8E /* LaunchScreen.storyboard */,
 				E8D68FD61DACF08600242E8E /* Info.plist */,
 				E8D68FC51DACF08600242E8E /* Supporting Files */,
 			);
@@ -386,7 +388,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D68FD51DACF08600242E8E /* LaunchScreen.storyboard in Resources */,
 				E8D68FD21DACF08600242E8E /* Assets.xcassets in Resources */,
 				E8D68FD01DACF08600242E8E /* Main.storyboard in Resources */,
 			);
@@ -463,6 +464,7 @@
 				E8F27FC21DBA1FA100BC7BB9 /* SplashScreenController.m in Sources */,
 				E89364B91DBA6316001923AB /* HomeController.m in Sources */,
 				7830818F1DDEC1510003D012 /* DashboardStat.m in Sources */,
+				78995E3E1DE48FD600D2AE89 /* UnallocatedCell.m in Sources */,
 				E89364BF1DBA6959001923AB /* NewsController.m in Sources */,
 				7899D4911DDE952300CEADA5 /* DashboardApi.m in Sources */,
 				7830818C1DDEC0920003D012 /* TimeTable.m in Sources */,
@@ -482,14 +484,6 @@
 				E8D68FCF1DACF08600242E8E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E8D68FD31DACF08600242E8E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E8D68FD41DACF08600242E8E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
