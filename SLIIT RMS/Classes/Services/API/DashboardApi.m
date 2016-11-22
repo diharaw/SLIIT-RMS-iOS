@@ -40,18 +40,7 @@
          {
              if(responseObject != nil)
              {
-                 NSInteger code = [[responseObject valueForKey:@"code"] integerValue];
-                 
-                 if(code == 200)
-                     block(responseObject, nil);
-                 else
-                 {
-                     NSError* error = [[NSError alloc]init];
-                     NSMutableDictionary* ud = [[error userInfo] mutableCopy];
-                     [ud setValue:@"Failed to retrieve Dashboard" forKey:@"NSLocalizedDescription"];
-                     error = [NSError errorWithDomain:@"" code:code userInfo:ud];
-                     block(nil, error);
-                 }
+                 block(responseObject, nil);
              }
              else
              {

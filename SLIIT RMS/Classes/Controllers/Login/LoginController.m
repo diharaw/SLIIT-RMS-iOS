@@ -52,7 +52,7 @@
 
 - (IBAction)onLoginPressed:(id)sender
 {
-    [self performSegueWithIdentifier:@"LoginToDrawerMain" sender:self];
+    //[self performSegueWithIdentifier:@"LoginToDrawerMain" sender:self];
     
     if([self validateEmail:self.txtEmail.text])
     {

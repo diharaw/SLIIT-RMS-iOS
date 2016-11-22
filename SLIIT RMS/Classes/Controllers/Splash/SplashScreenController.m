@@ -38,7 +38,7 @@
     {
         MMDrawerController* drawer = (MMDrawerController*)[segue destinationViewController];
         
-        UIViewController* center = [self.storyboard instantiateViewControllerWithIdentifier:@"TimeTableNav"];
+        UIViewController* center = [self.storyboard instantiateViewControllerWithIdentifier:@"CoreNav"];
         [drawer setCenterViewController:center];
         
         SideDrawerController* left = (SideDrawerController*)[self.storyboard instantiateViewControllerWithIdentifier:@"SideDrawer"];
