@@ -77,8 +77,6 @@
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bwi-Q6-S0P">
                                                         <rect key="frame" x="32" y="91" width="226" height="30"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="bwi-Q6-S0P" secondAttribute="height" multiplier="113:15" id="1BM-5R-Pr8"/>
-                                                            <constraint firstAttribute="width" secondItem="bwi-Q6-S0P" secondAttribute="height" multiplier="113:15" id="TS4-Di-Uvd"/>
                                                             <constraint firstAttribute="height" constant="30" id="qAy-Lg-ep6"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
@@ -88,9 +86,7 @@
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jit-sG-nhI">
                                                         <rect key="frame" x="32" y="49" width="226" height="30"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="jit-sG-nhI" secondAttribute="height" multiplier="113:15" id="7Wl-HS-OWM"/>
                                                             <constraint firstAttribute="height" constant="30" id="aTd-ms-H8Z"/>
-                                                            <constraint firstAttribute="width" secondItem="jit-sG-nhI" secondAttribute="height" multiplier="113:15" id="hbK-ce-xEv"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
@@ -107,8 +103,6 @@
                                                         <color key="backgroundColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="03R-uc-puu"/>
-                                                            <constraint firstAttribute="width" secondItem="qzO-Qt-oOh" secondAttribute="height" multiplier="113:15" id="JGT-Cd-vfj"/>
-                                                            <constraint firstAttribute="width" secondItem="qzO-Qt-oOh" secondAttribute="height" multiplier="113:15" id="Pch-Lc-RsE"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" title="LOGIN">
@@ -126,11 +120,16 @@
                                                     <constraint firstItem="bwi-Q6-S0P" firstAttribute="top" secondItem="jit-sG-nhI" secondAttribute="bottom" constant="12" id="FoC-mm-9J2"/>
                                                     <constraint firstItem="qzO-Qt-oOh" firstAttribute="centerX" secondItem="7yR-4x-eec" secondAttribute="centerX" id="GmK-mT-ed3"/>
                                                     <constraint firstAttribute="bottom" secondItem="qzO-Qt-oOh" secondAttribute="bottom" constant="30" id="LtV-tJ-yfF"/>
+                                                    <constraint firstItem="qzO-Qt-oOh" firstAttribute="leading" secondItem="7yR-4x-eec" secondAttribute="leading" constant="32" id="WCV-xD-sh0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bwi-Q6-S0P" secondAttribute="trailing" constant="33" id="dda-Tw-sDh"/>
+                                                    <constraint firstItem="jit-sG-nhI" firstAttribute="leading" secondItem="7yR-4x-eec" secondAttribute="leading" constant="32" id="gqc-aZ-zsT"/>
                                                     <constraint firstItem="trD-F5-Gew" firstAttribute="leading" secondItem="7yR-4x-eec" secondAttribute="leading" constant="32" id="hdy-RV-Rxb"/>
                                                     <constraint firstItem="jit-sG-nhI" firstAttribute="centerX" secondItem="7yR-4x-eec" secondAttribute="centerX" id="kYT-c0-bSZ"/>
                                                     <constraint firstItem="jit-sG-nhI" firstAttribute="top" secondItem="trD-F5-Gew" secondAttribute="bottom" constant="14" id="lQS-os-RIR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qzO-Qt-oOh" secondAttribute="trailing" constant="33" id="q5M-Us-Tv7"/>
                                                     <constraint firstItem="bwi-Q6-S0P" firstAttribute="centerX" secondItem="7yR-4x-eec" secondAttribute="centerX" id="rmK-Ue-TUH"/>
-                                                    <constraint firstAttribute="width" secondItem="7yR-4x-eec" secondAttribute="height" multiplier="291:226" constant="27.039823008849567" id="yHz-A2-HL8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jit-sG-nhI" secondAttribute="trailing" constant="33" id="v1N-Ug-uwX"/>
+                                                    <constraint firstItem="bwi-Q6-S0P" firstAttribute="leading" secondItem="7yR-4x-eec" secondAttribute="leading" constant="32" id="w5t-W8-TEb"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -815,7 +814,7 @@
             <objects>
                 <navigationController storyboardIdentifier="CoreNav" automaticallyAdjustsScrollViewInsets="NO" id="r0q-vo-afq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CI8-20-EeJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CI8-20-EeJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -859,6 +858,6 @@
         <image name="user-img-background" width="400" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="18d-rq-MEA"/>
+        <segue reference="Sd3-2y-iVl"/>
     </inferredMetricsTieBreakers>
 </document>
