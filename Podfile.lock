@@ -57,7 +57,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - FontAwesomeKit
+  - FontAwesomeKit (~> 2.2.0)
   - MBProgressHUD
   - MMDrawerController (~> 0.5.7)
   - MZFormSheetPresentationController
@@ -78,6 +78,6 @@ SPEC CHECKSUMS:
   TPKeyboardAvoiding: a5138f318c06fb3e151f886e18ce4a72695d9cbe
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
 
-PODFILE CHECKSUM: 7cba878f72a29e7d7d3f1c326700839cd72fcd9e
+PODFILE CHECKSUM: 21163e55795404870ad6c3a1129ffde0ff1f3752
 
 COCOAPODS: 1.1.1

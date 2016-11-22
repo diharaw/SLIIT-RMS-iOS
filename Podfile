@@ -10,7 +10,7 @@ target 'SLIIT RMS' do
   pod 'TSMessages'
   pod 'AFNetworking'
   pod 'MBProgressHUD'
-  pod 'FontAwesomeKit'
+  pod 'FontAwesomeKit', '~> 2.2.0'
   pod 'TPKeyboardAvoiding'
   pod 'OLCOrm'
   pod 'MZFormSheetPresentationController'
