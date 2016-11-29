@@ -10,4 +10,9 @@
 
 @interface DashboardController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *lblBatches;
+@property (weak, nonatomic) IBOutlet UILabel *lblHalls;
+@property (weak, nonatomic) IBOutlet UILabel *lblLecturers;
+@property (weak, nonatomic) IBOutlet UILabel *lblLabs;
+
 @end
