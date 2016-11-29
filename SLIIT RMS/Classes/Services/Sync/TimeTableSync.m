@@ -9,6 +9,8 @@
 #import "TimeTableSync.h"
 #import "TimeTableApi.h"
 #import "TimeTable.h"
+#import "UserApi.h"
+#import "User.h"
 
 @implementation TimeTableSync
 {
@@ -49,22 +51,53 @@
 
 - (void)processTimeTableResponse:(NSDictionary*)response withError:(NSError*)error
 {
-    if(response != nil)
+    if(error.code == 403)
     {
-        [TimeTable truncate];
-        
-        [self saveTimeTableForDay:response withDay:@"Monday"];
-        [self saveTimeTableForDay:response withDay:@"Tuseday"];
-        [self saveTimeTableForDay:response withDay:@"Wednesday"];
-        [self saveTimeTableForDay:response withDay:@"Thursday"];
-        [self saveTimeTableForDay:response withDay:@"Friday"];
-        [self saveTimeTableForDay:response withDay:@"Saturday"];
-        [self saveTimeTableForDay:response withDay:@"Sunday"];
-        
-        [self.delegate onTimeTableSyncComplete:nil];
+        UserApi* userAPI = [[UserApi alloc] init];
+        User* initialUser = (User*)[User all].firstObject;
+        [userAPI login:initialUser.email withPassword:initialUser.password withBlock:^(NSDictionary *response, NSError *error)
+         {
+             if(error == nil)
+             {
+                 if(response != nil)
+                 {
+                     User* user = [[User alloc] init];
+                     user.email = initialUser.email;
+                     user.password = initialUser.password;
+                     user.apiKey = [response valueForKey:@"data"];
+                     
+                     [User truncate];
+                     [user save];
+                     
+                     [self startTimeTableSync:@"BATCH" withWeekType:@"Weekday" withId:@"BT_1_1" withYear:2016 withSemester:2];
+                 }
+                 else
+                     [self.delegate onTimeTableSyncComplete:error];
+             }
+             else
+                 [self.delegate onTimeTableSyncComplete:error];
+             
+         }];
     }
     else
-        [self.delegate onTimeTableSyncComplete:error];
+    {
+        if(response != nil)
+        {
+            [TimeTable truncate];
+            
+            [self saveTimeTableForDay:response withDay:@"Monday"];
+            [self saveTimeTableForDay:response withDay:@"Tuseday"];
+            [self saveTimeTableForDay:response withDay:@"Wednesday"];
+            [self saveTimeTableForDay:response withDay:@"Thursday"];
+            [self saveTimeTableForDay:response withDay:@"Friday"];
+            [self saveTimeTableForDay:response withDay:@"Saturday"];
+            [self saveTimeTableForDay:response withDay:@"Sunday"];
+            
+            [self.delegate onTimeTableSyncComplete:nil];
+        }
+        else
+            [self.delegate onTimeTableSyncComplete:error];
+    }
 }
 
 - (void) saveTimeTableForDay:(NSDictionary*)response withDay:(NSString*)day

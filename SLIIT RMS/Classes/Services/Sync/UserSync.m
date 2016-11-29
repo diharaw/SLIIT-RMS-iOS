@@ -40,7 +40,62 @@
      }];
 }
 
+- (void) startProfileSync
+{
+    [userAPI profile:^(NSDictionary *response, NSError *error)
+     {
+         [self processProfileResponse:response withError:error];
+     }];
+}
+
 #pragma mark - private
+
+- (void)processProfileResponse:(NSDictionary*)response withError:(NSError*)error
+{
+    if(error.code == 403)
+    {
+        User* initialUser = (User*)[User all].firstObject;
+        [userAPI login:initialUser.email withPassword:initialUser.password withBlock:^(NSDictionary *response, NSError *error)
+         {
+             if(error == nil)
+             {
+                 if(response != nil)
+                 {
+                     User* user = [[User alloc] init];
+                     user.email = initialUser.email;
+                     user.password = initialUser.password;
+                     user.apiKey = [response valueForKey:@"data"];
+                     
+                     [User truncate];
+                     [user save];
+                     
+                     [self startProfileSync];
+                 }
+                 else
+                     [self.delegate onProfileSyncComplete:error];
+             }
+             else
+                 [self.delegate onProfileSyncComplete:error];
+         }];
+    }
+    else
+    {
+        if(response != nil)
+        {
+            User* user = (User*)[User all].firstObject;
+            
+            user.name = [NSString stringWithFormat:@"%@ %@", [response valueForKey:@"fname"], [response valueForKey:@"lname"]];
+            user.pictureUrl = [response valueForKey:@"profilePicture"];
+            
+            [user update];
+            
+            [self.delegate onProfileSyncComplete:nil];
+        }
+        else
+            [self.delegate onProfileSyncComplete:error];
+        
+    }
+}
 
 - (void)processLoginResponse:(NSDictionary*)response  withEmail:(NSString*)email withPassword:(NSString*)password withError:(NSError*)error
 {

@@ -7,9 +7,11 @@
 //
 
 #import "UserApi.h"
+#include "User.h"
 #import "Consts.h"
 
 #define API_AUTH @"auth/token"
+#define API_PROFILE @"user-details/get"
 
 @implementation UserApi
 {
@@ -73,6 +75,68 @@
              NSError* error = [[NSError alloc]init];
              NSMutableDictionary* ud = [[error userInfo] mutableCopy];
              [ud setValue:@"Failed to Login" forKey:@"NSLocalizedDescription"];
+             error = [NSError errorWithDomain:@"" code:httpResponse.statusCode userInfo:ud];
+             
+             block(nil, error);
+         }
+     }
+          failure:
+     ^(NSURLSessionTask *operation, NSError *error)
+     {
+         NSLog(@"Error : %@", error);
+         block(nil, error);
+     }];
+}
+
+-(void) profile:(void (^)(NSDictionary* response, NSError *error)) block
+{
+    NSString* apiToken = ((User*)[User all].firstObject).apiKey;
+    
+    NSDictionary* requestParameters = @{
+                                        @"bearerToken": apiToken
+                                        };
+    
+    NSString* url = [NSString stringWithFormat:@"%@/%@", API_BASE_URL, API_PROFILE];
+    
+    [manager POST:url parameters:requestParameters progress:nil
+          success:
+     ^(NSURLSessionTask *task, id responseObject)
+     {
+         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)task.response;
+         
+         if(httpResponse.statusCode == 200)
+         {
+             if(responseObject != nil)
+             {
+                 NSInteger code = [[responseObject valueForKey:@"code"] integerValue];
+                 NSDictionary* response = [responseObject valueForKey:@"data"];
+                 
+                 if(code == 200)
+                     block(response, nil);
+                 else
+                 {
+                     NSError* error = [[NSError alloc]init];
+                     NSMutableDictionary* ud = [[error userInfo] mutableCopy];
+                     [ud setValue:@"Failed to download User proile" forKey:@"NSLocalizedDescription"];
+                     error = [NSError errorWithDomain:@"" code:code userInfo:ud];
+                     block(nil, error);
+                 }
+             }
+             else
+             {
+                 NSError* error = [[NSError alloc]init];
+                 NSMutableDictionary* ud = [[error userInfo] mutableCopy];
+                 [ud setValue:@"Failed to download User proile" forKey:@"NSLocalizedDescription"];
+                 error = [NSError errorWithDomain:@"" code:httpResponse.statusCode userInfo:ud];
+                 block(nil, error);
+             }
+             
+         }
+         else
+         {
+             NSError* error = [[NSError alloc]init];
+             NSMutableDictionary* ud = [[error userInfo] mutableCopy];
+             [ud setValue:@"Failed to download User proile" forKey:@"NSLocalizedDescription"];
              error = [NSError errorWithDomain:@"" code:httpResponse.statusCode userInfo:ud];
              
              block(nil, error);

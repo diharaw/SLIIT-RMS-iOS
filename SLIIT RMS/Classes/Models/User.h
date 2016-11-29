@@ -14,5 +14,7 @@
 @property (nonatomic, retain) NSString* email;
 @property (nonatomic, retain) NSString* password;
 @property (nonatomic, retain) NSString* apiKey;
+@property (nonatomic, retain) NSString* name;
+@property (nonatomic, retain) NSString* pictureUrl;
 
 @end

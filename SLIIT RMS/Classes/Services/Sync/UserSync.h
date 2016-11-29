@@ -11,6 +11,7 @@
 @protocol UserSyncDelegate <NSObject>
 @optional
 - (void) onLoginSyncComplete:(NSError*) error;
+- (void) onProfileSyncComplete:(NSError*) error;
 @end
 
 @interface UserSync : NSObject
@@ -19,5 +20,6 @@
 
 + (UserSync *) sharedCenter;
 - (void) startLoginSync: (NSString*)email withPassword:(NSString*)password;
+- (void) startProfileSync;
 
 @end

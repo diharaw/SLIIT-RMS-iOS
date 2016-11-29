@@ -12,5 +12,6 @@
 @interface UserApi : NSObject
 
 -(void) login:(NSString*)email withPassword:(NSString*)password withBlock:(void (^)(NSDictionary* response, NSError *error)) block;
+-(void) profile:(void (^)(NSDictionary* response, NSError *error)) block;
 
 @end
