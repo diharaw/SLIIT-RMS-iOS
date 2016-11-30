@@ -9,6 +9,7 @@
 #import "LoginController.h"
 #import "UserSync.h"
 #import "SideDrawerController.h"
+#import "User.h"
 #import <TSMessage.h>
 #import <MBProgressHUD.h>
 #import <MMDrawerController.h>
@@ -81,17 +82,29 @@
 
 - (void)onLoginSyncComplete:(NSError *)error
 {
+    if(error == nil)
+        [[UserSync sharedCenter] startProfileSync];
+    else
+    {
+        [progressHud hideAnimated:YES];
+        [TSMessage showNotificationInViewController:self title:@"Error!" subtitle:@"Failed to Login" type:TSMessageNotificationTypeError duration:3];
+    }
+}
+
+- (void)onProfileSyncComplete:(NSError *)error
+{
     [progressHud hideAnimated:YES];
     
     if(error == nil)
         [self performSegueWithIdentifier:@"LoginToDrawerMain" sender:self];
     else
     {
+        [User truncate];
         [TSMessage showNotificationInViewController:self title:@"Error!" subtitle:@"Failed to Login" type:TSMessageNotificationTypeError duration:3];
     }
 }
 
-#pragma mark - Segue 
+#pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

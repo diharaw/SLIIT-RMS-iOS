@@ -11,12 +11,16 @@
 #import "User.h"
 #import "UIViewController+MMDrawerController.h"
 #import <FAKIonIcons.h>
+#import <UIImageView+AFNetworking.h>
 
 @interface SideDrawerController () <UITableViewDelegate>
 @property(nonatomic) NSInteger currentIndex;
 @end
 
 @implementation SideDrawerController
+{
+    User* user;
+}
 
 - (void)viewDidLoad
 {
@@ -33,6 +37,13 @@
     
     self.pictureParent.layer.cornerRadius = self.pictureParent.frame.size.width / 2;
     self.pictureParent.clipsToBounds = YES;
+    
+    user = (User*)[User all].firstObject;
+    
+    NSURL* url = [NSURL URLWithString:user.pictureUrl];
+    [self.imgProfilePicture setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Profile_avatar_placeholder_large"]];
+
+    self.lblUserName.text = user.name;
 }
 
 #pragma mark - Private

@@ -10,4 +10,6 @@
 
 @interface NewsController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tblNews;
+
 @end

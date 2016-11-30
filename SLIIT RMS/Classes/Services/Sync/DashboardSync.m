@@ -40,7 +40,6 @@
      {
          [self processDashboardResponse:response withError:error];
      }];
-    
 }
 
 #pragma mark - private
