@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "User.h"
 #import "TimeTable.h"
+#import "NewsItem.h"
 #import "DashboardStat.h"
 #import <OLCOrm.h>
 
@@ -52,10 +53,11 @@
 
 - (void) initDB
 {
-    OLCOrm* dbH = [OLCOrm databaseName:@"SLIIT_RMS_DB" version:[NSNumber numberWithInt:6] enableDebug:YES];
+    OLCOrm* dbH = [OLCOrm databaseName:@"SLIIT_RMS_DB" version:[NSNumber numberWithInt:7] enableDebug:YES];
     [dbH makeTable:[User class]];
     [dbH makeTable:[TimeTable class]];
     [dbH makeTable:[DashboardStat class]];
+    [dbH makeTable:[NewsItem class]];
 }
 
 @end

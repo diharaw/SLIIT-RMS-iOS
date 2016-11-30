@@ -26,10 +26,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setupUI];
     [self downloadData];
 }
 
 #pragma mark - Private
+
+- (void) setupUI
+{
+    self.tblNews.delegate = self;
+    self.tblNews.dataSource = self;
+}
 
 - (void) downloadData
 {
@@ -41,6 +48,10 @@
         [self.view addSubview:progressHud];
         progressHud.delegate = self;
         [progressHud showAnimated:YES];
+    }
+    else
+    {
+        [self.tblNews reloadData];
     }
     
     [NewsSync sharedCenter].delegate = self;
@@ -70,6 +81,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return newsItemList.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 130;
 }
 
 #pragma mark - Delegates

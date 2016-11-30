@@ -20,5 +20,6 @@
 - (void)loadTimeTable;
 - (void)loadNewsfeed;
 - (void)loadSettings;
+- (void)promptLogout;
 
 @end

@@ -44,6 +44,16 @@
         SideDrawerController* left = (SideDrawerController*)[self.storyboard instantiateViewControllerWithIdentifier:@"SideDrawer"];
         [drawer setLeftDrawerViewController:left];
     }
+    else if([segue.identifier isEqualToString:@"HomeToSplash"])
+    {
+
+    }
 }
+
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue
+{
+    
+}
+
 
 @end

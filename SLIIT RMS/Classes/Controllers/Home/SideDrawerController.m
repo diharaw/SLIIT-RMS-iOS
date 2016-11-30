@@ -93,7 +93,7 @@
             [home loadNewsfeed];
             break;
         case 4:
-            [home loadSettings];
+            [home promptLogout];
             break;
             
         default:

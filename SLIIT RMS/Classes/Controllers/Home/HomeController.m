@@ -14,6 +14,7 @@
 #import "MMDrawerController.h"
 #import "UIViewController+MMDrawerController.h"
 #import "SettingsController.h"
+#import "User.h"
 
 @interface HomeController ()
 {
@@ -106,6 +107,43 @@
     settingsController = (SettingsController*)[self.storyboard instantiateViewControllerWithIdentifier:@"Settings"];
     [self loadViewIntoContainer:settingsController];
     [self setTitle:@"Settings"];
+}
+
+- (void)promptLogout
+{
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:@"Info"
+                                  message:@"Are you sure you want to Log Out?"
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction
+                         actionWithTitle:@"Yes"
+                         style:UIAlertActionStyleDefault
+                         handler:^(UIAlertAction * action)
+                         {
+                             [User truncate];
+                             [self performSegueWithIdentifier:@"HomeToSplash" sender:self];
+                             [alert dismissViewControllerAnimated:YES completion:nil];
+                             
+                         }];
+    UIAlertAction* cancel = [UIAlertAction
+                             actionWithTitle:@"Cancel"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                                 
+                             }];
+    
+    [alert addAction:ok];
+    [alert addAction:cancel];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma mark - Segues
+
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
 }
 
 
