@@ -53,7 +53,7 @@
 
 - (void) initDB
 {
-    OLCOrm* dbH = [OLCOrm databaseName:@"SLIIT_RMS_DB" version:[NSNumber numberWithInt:7] enableDebug:YES];
+    OLCOrm* dbH = [OLCOrm databaseName:@"SLIIT_RMS_DB" version:[NSNumber numberWithInt:8] enableDebug:YES];
     [dbH makeTable:[User class]];
     [dbH makeTable:[TimeTable class]];
     [dbH makeTable:[DashboardStat class]];

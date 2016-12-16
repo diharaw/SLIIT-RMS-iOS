@@ -9,7 +9,11 @@
 #ifndef Consts_h
 #define Consts_h
 
-#define API_BASE_URL @"https://sep2test.altairsl.us/api"
+// Testing
+//#define API_BASE_URL @"https://sep2test.altairsl.us/api"
+
+// Production
+#define API_BASE_URL @"https://sep2.altairsl.us/api"
 
 // Types
 

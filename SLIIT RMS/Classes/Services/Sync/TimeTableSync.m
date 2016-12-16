@@ -86,7 +86,7 @@
             [TimeTable truncate];
             
             [self saveTimeTableForDay:response withDay:@"Monday"];
-            [self saveTimeTableForDay:response withDay:@"Tuseday"];
+            [self saveTimeTableForDay:response withDay:@"Tuesday"];
             [self saveTimeTableForDay:response withDay:@"Wednesday"];
             [self saveTimeTableForDay:response withDay:@"Thursday"];
             [self saveTimeTableForDay:response withDay:@"Friday"];
@@ -110,7 +110,7 @@
     
     if([day isEqualToString:@"Monday"])
         dayInt = 1;
-    else if([day isEqualToString:@"Tuseday"])
+    else if([day isEqualToString:@"Tuesday"])
         dayInt = 2;
     else if([day isEqualToString:@"Wednesday"])
         dayInt = 3;

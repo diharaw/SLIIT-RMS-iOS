@@ -76,4 +76,11 @@
     }
 }
 
+#pragma mark - UI Events
+
+- (IBAction)btnTimeTablePressed:(id)sender
+{
+    [self.controller loadTimeTable];
+}
+
 @end

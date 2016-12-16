@@ -86,6 +86,7 @@
             
             user.name = [NSString stringWithFormat:@"%@ %@", [response valueForKey:@"fname"], [response valueForKey:@"lname"]];
             user.pictureUrl = [response valueForKey:@"profilePicture"];
+            user.userId = [response valueForKey:@"id"];
             
             [user update];
             

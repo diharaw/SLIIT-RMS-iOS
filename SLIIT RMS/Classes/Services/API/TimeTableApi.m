@@ -9,7 +9,7 @@
 #import "TimeTableApi.h"
 #import "Consts.h"
 
-#define API_TIMETABLE @"timetable/getTimeTableJson"
+#define API_TIMETABLE @"timetable/getTimeTableJson/lecturer"
 
 @implementation TimeTableApi
 {
@@ -31,7 +31,7 @@
     NSDictionary* requestParameters = @{
                                         @"type": type,
                                         @"week_type" : weekType,
-                                        @"id" : strID,
+                                        @"lecturer_id" : strID,
                                         @"year" :  [NSNumber numberWithInteger:year],
                                         @"semester" : [NSNumber numberWithInteger:semester]
                                         };

@@ -10,6 +10,7 @@
 #import "TimeTablePageController.h"
 #import "TimeTableSync.h"
 #import "TimeTable.h"
+#import "User.h"
 #import <MBProgressHUD.h>
 
 @interface TimeTableController () <TimeTableSyncDelegate, MBProgressHUDDelegate>
@@ -49,7 +50,9 @@
     [TimeTableSync sharedCenter].delegate = self;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [[TimeTableSync sharedCenter] startTimeTableSync:@"BATCH" withWeekType:@"Weekday" withId:@"BT_1_1" withYear:2016 withSemester:2];
+        
+        User* currentUser = (User*)[User all].firstObject;
+        [[TimeTableSync sharedCenter] startTimeTableSync:@"LECTURER" withWeekType:@"Weekday" withId:currentUser.userId withYear:2016 withSemester:2];
     });
 }
 

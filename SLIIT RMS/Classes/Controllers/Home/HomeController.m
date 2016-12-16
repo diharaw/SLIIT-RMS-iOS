@@ -97,6 +97,7 @@
 {
     [self resetContainer];
     dashboardController = (DashboardController*)[self.storyboard instantiateViewControllerWithIdentifier:@"Dashboard"];
+    dashboardController.controller = self;
     [self loadViewIntoContainer:dashboardController];
     [self setTitle:@"Dashboard"];
 }

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeController.h"
 
 @interface DashboardController : UIViewController
 
@@ -14,5 +15,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblHalls;
 @property (weak, nonatomic) IBOutlet UILabel *lblLecturers;
 @property (weak, nonatomic) IBOutlet UILabel *lblLabs;
+@property (weak, nonatomic) IBOutlet UIButton *btnTimeTable;
+@property (weak, nonatomic) HomeController *controller;
+
+- (IBAction)btnTimeTablePressed:(id)sender;
+
 
 @end

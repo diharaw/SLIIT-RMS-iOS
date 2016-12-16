@@ -828,14 +828,24 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIN-lX-reL">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                        <connections>
+                                            <action selector="btnTimeTablePressed:" destination="EOY-o2-076" eventType="touchUpInside" id="AWo-Kx-K1l"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.43752386073919769" green="0.16593457164939518" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LIN-lX-reL" secondAttribute="trailing" id="1aa-4V-Rhu"/>
                                     <constraint firstItem="8YV-8o-LEu" firstAttribute="centerY" secondItem="MNZ-vt-OvU" secondAttribute="centerY" id="4Eo-OQ-wZc"/>
+                                    <constraint firstItem="LIN-lX-reL" firstAttribute="top" secondItem="MNZ-vt-OvU" secondAttribute="top" id="BWz-qA-X4s"/>
                                     <constraint firstAttribute="bottom" secondItem="xny-Lt-DoG" secondAttribute="bottom" constant="8" id="CCH-Hy-POT"/>
                                     <constraint firstItem="xny-Lt-DoG" firstAttribute="leading" secondItem="MNZ-vt-OvU" secondAttribute="leading" constant="8" id="Mz1-p7-KTp"/>
                                     <constraint firstItem="xny-Lt-DoG" firstAttribute="top" secondItem="MNZ-vt-OvU" secondAttribute="top" constant="8" id="OjX-lc-OV0"/>
+                                    <constraint firstAttribute="bottom" secondItem="LIN-lX-reL" secondAttribute="bottom" id="PUY-ab-n19"/>
                                     <constraint firstAttribute="height" constant="80" id="aBH-6p-uMy"/>
+                                    <constraint firstItem="LIN-lX-reL" firstAttribute="leading" secondItem="MNZ-vt-OvU" secondAttribute="leading" id="cv9-pC-NC4"/>
                                     <constraint firstItem="8YV-8o-LEu" firstAttribute="centerX" secondItem="MNZ-vt-OvU" secondAttribute="centerX" id="ebY-js-kcu"/>
                                 </constraints>
                             </view>
@@ -877,6 +887,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnTimeTable" destination="LIN-lX-reL" id="ieV-dD-Wwr"/>
                         <outlet property="lblBatches" destination="YrQ-9E-gIM" id="w71-Wj-9jJ"/>
                         <outlet property="lblHalls" destination="2VG-c2-GMs" id="uow-Bb-Btf"/>
                         <outlet property="lblLabs" destination="c7I-Qk-dGg" id="RbT-Ac-Snw"/>
